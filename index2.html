@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DearAfter™ - Your Will divides things. This brings them together.</title>
+    <meta name="description" content="A printable letter that says what your will can't — and gives peace of mind to those you love.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-navy: #1B2B4D;
+            --warm-gold: #C9A96E;
+            --soft-grey: #6B7280;
+            --light-grey: #F8F9FA;
+            --ivory: #FEFCF8;
+            --dark-text: #2D3748;
+            --medium-text: #4A5568;
+            --success-green: #22C55E;
+            --trust-blue: #3B82F6;
+            --urgent-red: #DC2626;
+            --warning-orange: #F59E0B;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            line-height: 1.65;
+            color: var(--dark-text);
+            background-color: var(--ivory);
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: rgba(254, 252, 248, 0.97);
+            backdrop-filter: blur(12px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(201, 169, 110, 0.2);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 300;
+            color: var(--primary-navy);
+            text-decoration: none;
+            letter-spacing: -0.8px;
+        }
+
+        .nav-links {
+            display: none;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--medium-text);
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-navy);
+        }
+
+        .nav-cta {
+            background: var(--primary-navy);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            background: #243A5E;
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 140px 20px 100px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--ivory) 0%, #F6F8FA 100%);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.8rem;
+            line-height: 1.15;
+            margin-bottom: 30px;
+            color: var(--primary-navy);
+            font-weight: 300;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-sub {
+            font-size: 1.5rem;
+            color: var(--medium-text);
+            margin-bottom: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.5;
+        }
+
+        .primary-cta {
+            display: inline-block;
+            background: var(--primary-navy);
+            color: white;
+            padding: 22px 50px;
+            font-size: 1.3rem;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-family: Georgia, serif;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(27, 43, 77, 0.25);
+            font-weight: 500;
+            margin-bottom: 15px;
+            display: block;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 15px;
+        }
+
+        .primary-cta:hover {
+            background: #243A5E;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(27, 43, 77, 0.35);
+        }
+
+        .cta-subtext {
+            font-size: 1rem;
+            color: var(--soft-grey);
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        .trust-indicators {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: var(--soft-grey);
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* What Happens If You Say Nothing Section */
+        .consequences-section {
+            padding: 80px 20px;
+            background: white;
+            border-top: 3px solid var(--urgent-red);
+        }
+
+        .consequences-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--urgent-red);
+            margin-bottom: 60px;
+            font-weight: 300;
+        }
+
+        .consequences-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .consequence-card {
+            background: #FEF2F2;
+            border: 2px solid #FECACA;
+            padding: 35px;
+            border-radius: 12px;
+            text-align: center;
+            position: relative;
+        }
+
+        .consequence-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .consequence-title {
+            font-size: 1.4rem;
+            color: var(--urgent-red);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .consequence-text {
+            font-size: 1.1rem;
+            color: var(--dark-text);
+            line-height: 1.7;
+        }
+
+        /* Enhanced Value Stack Section */
+        .value-stack {
+            padding: 80px 20px;
+            background: var(--light-grey);
+            border-top: 3px solid var(--success-green);
+        }
+
+        .value-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--primary-navy);
+            font-weight: 300;
+        }
+
+        .value-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            border: 3px solid var(--success-green);
+            border-radius: 16px;
+            padding: 40px;
+            position: relative;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .value-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #E2E8F0;
+        }
+
+        .value-item:last-of-type {
+            border-bottom: 2px solid var(--success-green);
+            margin-bottom: 20px;
+        }
+
+        .value-name {
+            font-size: 1.2rem;
+            color: var(--dark-text);
+            font-weight: 500;
+            flex: 1;
+        }
+
+        .value-price {
+            font-size: 1.1rem;
+            color: var(--soft-grey);
+            text-decoration: line-through;
+            margin-left: 20px;
+            font-weight: 500;
+        }
+
+        .value-total {
+            background: var(--primary-navy);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0 20px;
+            text-align: center;
+        }
+
+        .total-text {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        .total-price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-decoration: line-through;
+        }
+
+        .your-price {
+            background: var(--success-green);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+        }
+
+        .your-price-text {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .your-price-amount {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .guarantee-mini {
+            background: #FEF7E6;
+            border: 2px solid var(--warm-gold);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .guarantee-mini-text {
+            color: var(--dark-text);
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        /* Price Anchor Section */
+        .price-anchor {
+            padding: 80px 20px;
+            background: white;
+            text-align: center;
+        }
+
+        .price-anchor-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .price-anchor-title {
+            font-size: 2.2rem;
+            color: var(--primary-navy);
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .comparison-grid {
+            background: #F8FAFC;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+        }
+
+        .comparison-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #E2E8F0;
+            font-size: 1.1rem;
+        }
+
+        .comparison-item:last-child {
+            border-bottom: none;
+            color: var(--success-green);
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .comparison-service {
+            color: var(--dark-text);
+        }
+
+        .comparison-price {
+            color: var(--soft-grey);
+            font-weight: 500;
+        }
+
+        /* Urgency Section */
+        .urgency-section {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, var(--warning-orange) 0%, #F59E0B 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .urgency-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .urgency-title {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .urgency-text {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        /* Social Proof Section */
+        .social-proof {
+            padding: 80px 20px;
+            background: var(--light-grey);
+        }
+
+        .social-proof-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: var(--primary-navy);
+            font-weight: 300;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto 60px;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            position: relative;
+        }
+
+        .testimonial::before {
+            content: '"';
+            font-size: 3.5rem;
+            color: var(--warm-gold);
+            position: absolute;
+            top: -5px;
+            left: 20px;
+            line-height: 1;
+            font-weight: bold;
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--dark-text);
+            margin-bottom: 20px;
+            padding-top: 15px;
+        }
+
+        .testimonial-author {
+            color: var(--soft-grey);
+            font-size: 1rem;
+            font-weight: 500;
+            border-top: 1px solid #E2E8F0;
+            padding-top: 15px;
+        }
+
+        .social-cta {
+            text-align: center;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .social-cta-text {
+            font-size: 1.3rem;
+            color: var(--primary-navy);
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        /* Guarantee Section */
+        .guarantee-section {
+            padding: 80px 20px;
+            background: white;
+            text-align: center;
+        }
+
+        .guarantee-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #F0F9FF;
+            border: 3px solid var(--trust-blue);
+            border-radius: 16px;
+            padding: 50px 40px;
+            box-shadow: 0 8px 30px rgba(59, 130, 246, 0.15);
+        }
+
+        .guarantee-title {
+            font-size: 2.2rem;
+            color: var(--trust-blue);
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .guarantee-text {
+            font-size: 1.2rem;
+            color: var(--dark-text);
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .guarantee-icon {
+            font-size: 4rem;
+            color: var(--trust-blue);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* Final CTA Section */
+        .final-cta {
+            padding: 80px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary-navy) 0%, #243A5E 100%);
+            color: white;
+        }
+
+        .final-cta-title {
+            font-size: 2.8rem;
+            margin-bottom: 25px;
+            font-weight: 300;
+            line-height: 1.3;
+        }
+
+        .final-cta-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 50px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .final-cta .primary-cta {
+            background: var(--warm-gold);
+            color: var(--primary-navy);
+            font-weight: 600;
+            font-size: 1.4rem;
+            padding: 25px 60px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .final-cta .primary-cta:hover {
+            background: #D4B574;
+            transform: translateY(-3px);
+        }
+
+        .final-cta .cta-subtext {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Footer */
+        .footer {
+            background: #1F2937;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #D1D5DB;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-disclaimer {
+            font-size: 0.95rem;
+            color: #9CA3AF;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+
+            .consequences-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .primary-cta {
+                display: inline-block;
+                margin-bottom: 0;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .hero h1 {
+                font-size: 4.5rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero-sub {
+                font-size: 1.3rem;
+            }
+
+            .primary-cta {
+                padding: 18px 35px;
+                font-size: 1.1rem;
+            }
+
+            .value-container {
+                padding: 25px;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Accessibility */
+        .primary-cta:focus {
+            outline: 3px solid var(--warm-gold);
+            outline-offset: 3px;
+        }
+
+        /* Subtle animations */
+        .consequence-card:hover,
+        .testimonial:hover {
+            transform: translateY(-3px);
+            transition: transform 0.3s ease;
+        }
+
+        .value-container:hover {
+            transform: scale(1.02);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#" class="logo">DearAfter™</a>
+            <ul class="nav-links">
+                <li><a href="#consequences">The Problem</a></li>
+                <li><a href="#value-stack">What's Inside</a></li>
+                <li><a href="#social-proof">Reviews</a></li>
+                <li><a href="#guarantee">Guarantee</a></li>
+            </ul>
+            <a href="#value-stack" class="nav-cta">Download for £29</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Your Will divides things.<br>This brings them together.</h1>
+                <p class="hero-sub">A printable letter that says what your will can't — and gives peace of mind to those you love.</p>
+                <a href="#value-stack" class="primary-cta">Write your goodbye today — before it's too late</a>
+                <p class="cta-subtext">Instant download. One afternoon. A lifetime of peace.</p>
+                
+                <div class="trust-indicators">
+                    <div class="trust-item">
+                        <span>✓</span>
+                        <span>Instant Download</span>
+                    </div>
+                    <div class="trust-item">
+                        <span>✓</span>
+                        <span>30-Day Guarantee</span>
+                    </div>
+                    <div class="trust-item">
+                        <span>✓</span>
+                        <span>Printable PDF Kit</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Happens If You Say Nothing Section -->
+    <section id="consequences" class="consequences-section">
+        <div class="container">
+            <h2 class="consequences-title">What Happens If You Say Nothing?</h2>
+            <div class="consequences-grid">
+                <div class="consequence-card">
+                    <span class="consequence-icon">😰</span>
+                    <h3 class="consequence-title">Executor Left Guessing</h3>
+                    <p class="consequence-text">Your executor faces impossible decisions without your guidance, creating emotional and financial stress during an already difficult time.</p>
+                </div>
+                <div class="consequence-card">
+                    <span class="consequence-icon">💔</span>
+                    <h3 class="consequence-title">Children Miss Your Voice</h3>
+                    <p class="consequence-text">Your family never gets to hear from you one last time — missing the comfort of your words when they need them most.</p>
+                </div>
+                <div class="consequence-card">
+                    <span class="consequence-icon">⚔️</span>
+                    <h3 class="consequence-title">Family Conflict</h3>
+                    <p class="consequence-text">Unclear wishes lead to arguments, resentment, and relationships damaged forever over what you "would have wanted."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Value Stack Section -->
+    <section id="value-stack" class="value-stack">
+        <div class="container">
+            <h2 class="value-title">What's Inside</h2>
+            
+            <div class="value-container">
+                <div class="value-item">
+                    <span class="value-name">💬 Goodbye Letter Prompts</span>
+                    <span class="value-price">£29</span>
+                </div>
+                <div class="value-item">
+                    <span class="value-name">🧠 Executor Cheat Sheet</span>
+                    <span class="value-price">£19</span>
+                </div>
+                <div class="value-item">
+                    <span class="value-name">📘 Memory Capsule Worksheets</span>
+                    <span class="value-price">£15</span>
+                </div>
+                <div class="value-item">
+                    <span class="value-name">📝 Ethical Will Mini-Guide</span>
+                    <span class="value-price">£17</span>
+                </div>
+                <div class="value-item">
+                    <span class="value-name">👵 Letter to Grandkids (Bonus)</span>
+                    <span class="value-price">£11</span>
+                </div>
+
+                <div class="value-total">
+                    <div class="total-text">Total Value:</div>
+                    <div class="total-price">£91</div>
+                </div>
+
+                <div class="your-price">
+                    <div class="your-price-text">Yours for just</div>
+                    <div class="your-price-amount">£29</div>
+                </div>
+
+                <div class="guarantee-mini">
+                    <div class="guarantee-mini-text">30-Day Peace of Mind Guarantee Included</div>
+                </div>
+
+                <div style="text-align: center;">
+                    <a href="https://gumroad.com/dearafter" class="primary-cta">Write your goodbye today — before it's too late</a>
+                    <p class="cta-subtext">Instant download. One afternoon. A lifetime of peace.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Price Anchor Section -->
+    <section class="price-anchor">
+        <div class="container">
+            <div class="price-anchor-content">
+                <h2 class="price-anchor-title">Compare Your Options</h2>
+                <div class="comparison-grid">
+                    <div class="comparison-item">
+                        <span class="comparison-service">Professional legacy coaching</span>
+                        <span class="comparison-price">£300+</span>
+                    </div>
+                    <div class="comparison-item">
+                        <span class="comparison-service">Solicitor-assisted Letters of Wishes</span>
+                        <span class="comparison-price">£150–£400</span>
+                    </div>
+                    <div class="comparison-item">
+                        <span class="comparison-service">DearAfter gives you the same clarity</span>
+                        <span class="comparison-price">£29</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Urgency Section -->
+    <section class="urgency-section">
+        <div class="container">
+            <div class="urgency-content">
+                <h3 class="urgency-title">Bonus included only this month:</h3>
+                <p class="urgency-text">Letter to Grandkids + Executor Checklist (worth £30) — Free now.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section id="social-proof" class="social-proof">
+        <div class="container">
+            <h2 class="social-proof-title">Loved across the UK</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p class="testimonial-text">This helped my dad say what he couldn't in person.</p>
+                    <div class="testimonial-author">Simon, 42, Manchester</div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">It brought peace to our family before we even needed it.</p>
+                    <div class="testimonial-author">Rachel, 61, Bath</div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">More powerful than the will itself.</p>
+                    <div class="testimonial-author">Laura, 55, Leeds</div>
+                </div>
+            </div>
+
+            <div class="social-cta">
+                <p class="social-cta-text">Join 1,200+ families who've already downloaded DearAfter</p>
+                <a href="#value-stack" class="primary-cta">Write your goodbye today — before it's too late</a>
+                <p class="cta-subtext">Instant download. One afternoon. A lifetime of peace.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section id="guarantee" class="guarantee-section">
+        <div class="container">
+            <div class="guarantee-container">
+                <span class="guarantee-icon">🛡️</span>
+                <h2 class="guarantee-title">30-Day Peace of Mind Guarantee</h2>
+                <p class="guarantee-text">If it doesn't help you or your family feel closer and clearer — we refund you, no questions asked.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <h2 class="final-cta-title">Help your family feel closer, not just richer.</h2>
+            <p class="final-cta-subtitle">Give them your voice, your stories, and your love — the things that matter most.</p>
+            <a href="https://gumroad.com/dearafter" class="primary-cta">Write your goodbye today — before it's too late</a>
+            <p class="cta-subtext">Instant download. One afternoon. A lifetime of peace.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Contact Us</a>
+            </div>
+            
+            <p class="footer-disclaimer">
+                DearAfter™ is not a legal service. It's a legacy companion designed to work alongside your legally prepared will, helping you share what matters most with the people you love.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

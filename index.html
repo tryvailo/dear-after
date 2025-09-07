@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DearAfter™ - Your will says what they get. This says why you love them.</title>
-    <meta name="description" content="The premium emotional companion to any will – because legal documents can't hug your family. Complete your family's inheritance: assets AND love.">
+    <title>DearAfter™ - What happens when your children read your will... and hear silence?</title>
+    <meta name="description" content="The one document that lets you speak to them when you can't anymore. Complete your family's inheritance: assets AND love.">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_32x32.png">
-    <!-- FONT SIZES UPDATED VERSION 2.0 - 2024 -->
     
     <style>
         * {
@@ -43,7 +42,7 @@
             padding: 0 20px;
         }
 
-        /* Navigation - Optimized for Single Line */
+        /* Navigation */
         .navbar {
             background: rgba(254, 252, 248, 0.97);
             backdrop-filter: blur(12px);
@@ -75,13 +74,13 @@
         }
 
         .nav-logo {
-            height: 24px;
+            height: 36px;
             width: auto;
             flex-shrink: 0;
         }
 
         .logo {
-            font-size: 24px;
+            font-size: 36px;
             font-weight: 300;
             color: var(--primary-navy);
             text-decoration: none;
@@ -216,6 +215,30 @@
             gap: 8px;
         }
 
+        /* Urgency Section */
+        .urgency-banner {
+            background: #FEF7E6;
+            border: 2px solid var(--warning-orange);
+            padding: 20px;
+            margin: 40px auto;
+            border-radius: 12px;
+            text-align: center;
+            max-width: 600px;
+        }
+
+        .urgency-title {
+            color: var(--warning-orange);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .urgency-text {
+            color: var(--dark-text);
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
         /* Pain Section */
         .pain-section {
             padding: 80px 20px;
@@ -238,6 +261,141 @@
             line-height: 1.8;
             max-width: 700px;
             margin: 0 auto;
+        }
+
+        /* What's Inside Section */
+        .whats-inside-section {
+            padding: 80px 20px;
+            background: white;
+            border-top: 3px solid var(--success-green);
+        }
+
+        .whats-inside-title {
+            text-align: center;
+            font-size: 2.8rem;
+            color: var(--primary-navy);
+            margin-bottom: 40px;
+            font-weight: 300;
+            line-height: 1.3;
+        }
+
+        .product-overview {
+            max-width: 900px;
+            margin: 0 auto 60px;
+            background: var(--light-grey);
+            padding: 40px;
+            border-radius: 16px;
+            border-left: 4px solid var(--warm-gold);
+        }
+
+        .product-item {
+            background: white;
+            margin-bottom: 25px;
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 3px solid var(--trust-blue);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .product-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .product-item.bonus {
+            border-left-color: var(--warm-gold);
+            background: #FEF7E6;
+        }
+
+        .product-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .product-icon {
+            font-size: 2rem;
+            color: var(--trust-blue);
+        }
+
+        .product-item.bonus .product-icon {
+            color: var(--warm-gold);
+        }
+
+        .product-title {
+            font-size: 1.4rem;
+            color: var(--primary-navy);
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .product-pages {
+            background: var(--trust-blue);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-left: auto;
+        }
+
+        .product-item.bonus .product-pages {
+            background: var(--warm-gold);
+        }
+
+        .product-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .product-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        .product-features li::before {
+            content: "✓";
+            color: var(--success-green);
+            font-weight: bold;
+            margin-top: 2px;
+        }
+
+        .value-summary {
+            background: var(--primary-navy);
+            color: white;
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .value-summary h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .value-comparison {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+
+        .current-price {
+            color: var(--warm-gold);
+            font-weight: bold;
         }
 
         /* What Happens Section */
@@ -293,272 +451,7 @@
             line-height: 1.8;
         }
 
-        /* Emotional Will Section */
-        .emotional-will-section {
-            padding: 80px 20px;
-            background: linear-gradient(135deg, #F0F9FF 0%, #FEFCF8 100%);
-            text-align: center;
-        }
-
-        .emotional-will-title {
-            font-size: 2.8rem;
-            color: var(--primary-navy);
-            margin-bottom: 30px;
-            font-weight: 300;
-            line-height: 1.3;
-        }
-
-        .emotional-will-intro {
-            font-size: 1.4rem;
-            color: var(--medium-text);
-            margin-bottom: 50px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.6;
-        }
-
-        .will-comparison {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 30px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .will-type {
-            background: white;
-            padding: 35px;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        }
-
-        .will-type.legal {
-            border-left: 4px solid var(--trust-blue);
-        }
-
-        .will-type.emotional {
-            border-left: 4px solid var(--warm-gold);
-        }
-
-        .will-type-header {
-            font-size: 1.6rem;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-
-        .will-type.legal .will-type-header {
-            color: var(--trust-blue);
-        }
-
-        .will-type.emotional .will-type-header {
-            color: var(--warm-gold);
-        }
-
-        .will-comparison-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-        }
-
-        .will-comparison-icon {
-            margin-right: 15px;
-            font-size: 1.4rem;
-        }
-
-        /* Value Stack Section */
-        .value-stack {
-            padding: 80px 20px;
-            background: var(--light-grey);
-            border-top: 3px solid var(--success-green);
-        }
-
-        .value-title {
-            text-align: center;
-            font-size: 2.8rem;
-            margin-bottom: 40px;
-            color: var(--primary-navy);
-            font-weight: 300;
-            line-height: 1.3;
-        }
-
-        .value-intro {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 60px;
-        }
-
-        .value-intro h3 {
-            font-size: 1.6rem;
-            color: var(--primary-navy);
-            margin-bottom: 20px;
-            font-weight: 500;
-        }
-
-        .value-intro p {
-            font-size: 1.2rem;
-            color: var(--medium-text);
-            line-height: 1.7;
-        }
-
-        .value-container {
-            max-width: 700px;
-            margin: 0 auto;
-            background: white;
-            border: 3px solid var(--success-green);
-            border-radius: 16px;
-            padding: 40px;
-            position: relative;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .value-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-            border-bottom: 1px solid #E2E8F0;
-        }
-
-        .value-item:last-of-type {
-            border-bottom: 2px solid var(--success-green);
-            margin-bottom: 20px;
-        }
-
-        .value-name {
-            font-size: 1.4rem;
-            color: var(--dark-text);
-            font-weight: 500;
-            flex: 1;
-            line-height: 1.5;
-        }
-
-        .value-price {
-            font-size: 1.3rem;
-            color: var(--soft-grey);
-            text-decoration: line-through;
-            margin-left: 20px;
-            font-weight: 500;
-        }
-
-        .value-total {
-            background: var(--primary-navy);
-            color: white;
-            padding: 25px;
-            border-radius: 12px;
-            margin: 30px 0 20px;
-            text-align: center;
-        }
-
-        .total-text {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            opacity: 0.9;
-        }
-
-        .total-price {
-            font-size: 2.8rem;
-            font-weight: bold;
-            text-decoration: line-through;
-        }
-
-        .your-price {
-            background: var(--success-green);
-            color: white;
-            padding: 25px;
-            border-radius: 12px;
-            text-align: center;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
-        }
-
-        .your-price-text {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            font-weight: 500;
-        }
-
-        .your-price-amount {
-            font-size: 3.5rem;
-            font-weight: bold;
-        }
-
-        .value-container p {
-            text-align: center;
-            font-size: 1.3rem;
-            color: var(--success-green);
-            margin: 20px 0;
-            font-weight: 600;
-        }
-
-        .guarantee-mini {
-            background: #FEF7E6;
-            border: 2px solid var(--warm-gold);
-            border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .guarantee-mini-text {
-            color: var(--dark-text);
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-
-        /* Comparison Section */
-        .price-anchor {
-            padding: 80px 20px;
-            background: white;
-            text-align: center;
-        }
-
-        .price-anchor-content {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .price-anchor-title {
-            font-size: 2.2rem;
-            color: var(--primary-navy);
-            margin-bottom: 40px;
-            font-weight: 300;
-        }
-
-        .comparison-grid {
-            background: #F8FAFC;
-            padding: 30px;
-            border-radius: 12px;
-            margin-bottom: 40px;
-        }
-
-        .comparison-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px 0;
-            border-bottom: 1px solid #E2E8F0;
-            font-size: 1.3rem;
-            line-height: 1.6;
-        }
-
-        .comparison-item:last-child {
-            border-bottom: none;
-            color: var(--success-green);
-            font-weight: bold;
-            font-size: 1.5rem;
-        }
-
-        .comparison-service {
-            color: var(--dark-text);
-        }
-
-        .comparison-price {
-            color: var(--soft-grey);
-            font-weight: 500;
-        }
-
-        /* Testimonials */
+        /* Social Proof Section */
         .social-proof {
             padding: 80px 20px;
             background: var(--light-grey);
@@ -628,127 +521,6 @@
             color: var(--primary-navy);
             margin-bottom: 30px;
             font-weight: 500;
-        }
-
-        .proof-note {
-            text-align: center;
-            font-size: 1rem;
-            color: var(--soft-grey);
-            font-style: italic;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(201, 169, 110, 0.3);
-        }
-
-        /* Integration Section */
-        .integration-section {
-            padding: 80px 20px;
-            background: white;
-            text-align: center;
-        }
-
-        .integration-title {
-            font-size: 2.8rem;
-            color: var(--primary-navy);
-            margin-bottom: 30px;
-            font-weight: 300;
-            line-height: 1.3;
-        }
-
-        .integration-subtitle {
-            font-size: 1.3rem;
-            color: var(--medium-text);
-            margin-bottom: 50px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.6;
-        }
-
-        .compatible-services {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-
-        .service-tag {
-            background: var(--light-grey);
-            color: var(--primary-navy);
-            padding: 12px 20px;
-            border-radius: 25px;
-            font-size: 1rem;
-            font-weight: 500;
-            border: 2px solid var(--warm-gold);
-        }
-
-        .complete-inheritance {
-            background: linear-gradient(135deg, var(--warm-gold) 0%, #D4B574 100%);
-            color: white;
-            padding: 30px;
-            border-radius: 12px;
-            font-size: 1.4rem;
-            font-weight: 600;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        /* How It Works */
-        .how-it-works {
-            padding: 80px 20px;
-            background: var(--light-grey);
-        }
-
-        .how-it-works h2 {
-            text-align: center;
-            font-size: 2.8rem;
-            margin-bottom: 60px;
-            color: var(--primary-navy);
-            font-weight: 300;
-            line-height: 1.3;
-        }
-
-        .how-it-works ol {
-            max-width: 700px;
-            margin: 0 auto;
-            counter-reset: step-counter;
-            list-style: none;
-            padding: 0;
-        }
-
-        .how-it-works li {
-            background: white;
-            padding: 30px;
-            margin-bottom: 20px;
-            border-radius: 12px;
-            border-left: 4px solid var(--warm-gold);
-            counter-increment: step-counter;
-            position: relative;
-            font-size: 1.2rem;
-            line-height: 1.7;
-        }
-
-        .how-it-works li::before {
-            content: counter(step-counter);
-            position: absolute;
-            left: -15px;
-            top: 20px;
-            background: var(--warm-gold);
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-
-        .how-it-works strong {
-            color: var(--primary-navy);
-            font-size: 1.3rem;
         }
 
         /* FAQ */
@@ -845,6 +617,15 @@
             display: block;
         }
 
+        .guarantee-stats {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 25px;
+            font-style: italic;
+            color: var(--medium-text);
+        }
+
         /* Final CTA */
         .final-cta {
             padding: 80px 20px;
@@ -886,46 +667,6 @@
             color: rgba(255, 255, 255, 0.8);
         }
 
-        /* Value Props */
-        .value-props {
-            padding: 60px 20px;
-            background: var(--light-grey);
-            text-align: center;
-        }
-
-        .value-props-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 30px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .value-prop-item {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        }
-
-        .value-prop-icon {
-            font-size: 2rem;
-            margin-bottom: 15px;
-            display: block;
-        }
-
-        .value-prop-title {
-            font-size: 1.3rem;
-            color: var(--primary-navy);
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .value-prop-text {
-            color: var(--medium-text);
-            font-size: 1rem;
-        }
-
         /* Footer */
         .footer {
             background: #1F2937;
@@ -961,14 +702,14 @@
             margin: 0 auto;
         }
 
-        /* Responsive Design - Optimized for Single Line Header */
+        /* Responsive Design */
         @media (max-width: 480px) {
             .nav-logo {
-                height: 20px;
+                height: 30px;
             }
 
             .logo {
-                font-size: 20px;
+                font-size: 30px;
             }
 
             .nav-cta {
@@ -988,21 +729,11 @@
             }
 
             .nav-logo {
-                height: 22px;
+                height: 33px;
             }
 
             .logo {
-                font-size: 22px;
-            }
-
-            .nav-cta {
-                font-size: 13px;
-                padding: 11px 16px;
-            }
-
-            .nav-content {
-                padding: 15px 18px;
-                gap: 12px;
+                font-size: 33px;
             }
 
             .hero h1 {
@@ -1024,88 +755,28 @@
                 font-size: 0.8rem;
             }
 
-            .value-container {
+            .product-overview {
                 padding: 30px 20px;
-            }
-
-            .consequences-title,
-            .value-title {
-                font-size: 2.2rem;
-            }
-
-            .consequence-title {
-                font-size: 1.4rem;
-            }
-
-            .consequence-text {
-                font-size: 1.2rem;
             }
 
             .testimonial-text {
                 font-size: 1.2rem;
             }
 
-            /* Mobile adjustments for new sections */
-            .pain-section h2,
-            .how-it-works h2,
-            .faq h2,
-            .emotional-will-title,
-            .integration-title {
-                font-size: 2.2rem;
-            }
-
-            .will-comparison {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .will-type {
-                padding: 25px;
-            }
-
-            .compatible-services {
+            .product-header {
+                flex-direction: column;
+                align-items: flex-start;
                 gap: 10px;
             }
 
-            .service-tag {
-                font-size: 0.9rem;
-                padding: 10px 16px;
+            .product-pages {
+                margin-left: 0;
+                align-self: flex-start;
             }
 
-            .complete-inheritance {
-                font-size: 1.2rem;
-                padding: 25px;
-            }
-
-            .value-props-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .value-prop-item {
-                padding: 25px;
-            }
-
-            .how-it-works li {
-                padding: 25px 25px 25px 35px;
-                font-size: 1.1rem;
-            }
-
-            .how-it-works li::before {
-                width: 35px;
-                height: 35px;
-                left: -12px;
-                font-size: 1rem;
-            }
-
-            .faq summary {
-                padding: 20px 25px;
-                font-size: 1.2rem;
-            }
-
-            .faq details p {
-                padding: 20px 25px;
-                font-size: 1.1rem;
+            .value-comparison {
+                flex-direction: column;
+                gap: 15px;
             }
         }
 
@@ -1135,28 +806,25 @@
                 margin-bottom: 0;
             }
 
-            /* Tablet navbar adjustments */
+            .product-header {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .product-pages {
+                margin-left: auto;
+            }
+
             .nav-logo {
-                height: 26px;
+                height: 39px;
             }
 
             .logo {
-                font-size: 26px;
+                font-size: 23px;
             }
 
             .logo-container {
                 gap: 10px;
-            }
-
-            /* Tablet adjustments for new sections */
-            .will-comparison {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 30px;
-            }
-
-            .value-props-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 30px;
             }
         }
 
@@ -1175,30 +843,8 @@
                 padding: 30px 70px;
             }
 
-            .consequences-title,
-            .value-title,
-            .social-proof-title,
-            .emotional-will-title,
-            .integration-title {
-                font-size: 3.2rem;
-            }
-
             .testimonial-text {
                 font-size: 1.4rem;
-            }
-
-            .will-comparison {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 40px;
-            }
-
-            .will-type {
-                padding: 40px;
-            }
-
-            .value-props-grid {
-                grid-template-columns: repeat(5, 1fr);
-                gap: 30px;
             }
         }
 
@@ -1220,18 +866,6 @@
             background: rgba(15, 27, 60, 0.1);
         }
 
-        /* Animations */
-        .consequence-card:hover,
-        .testimonial:hover {
-            transform: translateY(-3px);
-            transition: transform 0.3s ease;
-        }
-
-        .value-container:hover {
-            transform: scale(1.02);
-            transition: transform 0.3s ease;
-        }
-
         html {
             scroll-behavior: smooth;
         }
@@ -1247,11 +881,11 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#consequences">The Problem</a></li>
-                <li><a href="#value-stack">What's Inside</a></li>
+                <li><a href="#whats-inside">What's Inside</a></li>
                 <li><a href="#social-proof">Testimonials</a></li>
                 <li><a href="#guarantee">Guarantee</a></li>
             </ul>
-            <a href="#value-stack" class="nav-cta">Add heart</a>
+            <a href="#whats-inside" class="nav-cta">Give Them Your Voice Forever</a>
         </div>
     </nav>
 
@@ -1259,10 +893,18 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Your will says what they get.<br>This says why you love them.</h1>
-                <p class="hero-sub">The premium emotional companion to any will – because legal documents can't hug your family.</p>
-                <a href="#value-stack" class="primary-cta">Add the heart to your will<br><small>(Instant Download – No Signup Required)</small></a>
+                <h1>What happens when your children read your will... and hear silence?</h1>
+                <p class="hero-sub">The one document that lets you speak to them when you can't anymore</p>
+                <a href="#whats-inside" class="primary-cta">Give Them Your Voice Forever - £29<br><small>(Instant Download - No Signup Required)</small></a>
                 <p class="cta-subtext">Perfect complement to Farewill, solicitors, and any existing will</p>
+                
+                <!-- Urgency Banner -->
+                <div class="urgency-banner">
+                    <div class="urgency-title">⚠️ OCTOBER PRICING NOTICE</div>
+                    <div class="urgency-text">Only 127 families left to secure current £29 pricing<br>
+                    Next price increase to £49: November 1st<br>
+                    <em>Secure your family's emotional legacy at today's price</em></div>
+                </div>
                 
                 <div class="trust-indicators">
                     <div class="trust-item">
@@ -1271,7 +913,7 @@
                     </div>
                     <div class="trust-item">
                         <span>✓</span>
-                        <span>30-Day Guarantee</span>
+                        <span>60-Day Guarantee</span>
                     </div>
                     <div class="trust-item">
                         <span>✓</span>
@@ -1286,7 +928,127 @@
     <section class="pain-section">
         <div class="container">
             <h2>Most families get the legal will right, but miss the emotional will.</h2>
-            <p>Legal wills protect assets brilliantly. But they leave families emotionally unprepared – wondering not just what you decided, but <em>why you loved them</em> the way you did.</p>
+            <p>Legal wills protect assets brilliantly. But they leave families emotionally unprepared — wondering not just what you decided, but <em>why you loved them</em> the way you did.</p>
+        </div>
+    </section>
+
+    <!-- What's Inside Section -->
+    <section id="whats-inside" class="whats-inside-section">
+        <div class="container">
+            <h2 class="whats-inside-title">What You Get Inside Your £29 Kit</h2>
+            
+            <div class="product-overview">
+                <div class="product-item">
+                    <div class="product-header">
+                        <span class="product-icon">📄</span>
+                        <div class="product-title">Complete Emotional Will Guide</div>
+                        <div class="product-pages">16 pages</div>
+                    </div>
+                    <ul class="product-features">
+                        <li>The 4 Pillars of emotional estate planning</li>
+                        <li>UK cultural considerations for diverse families</li>
+                        <li>Integration with your existing legal will</li>
+                        <li>Professional delivery and storage instructions</li>
+                    </ul>
+                </div>
+
+                <div class="product-item">
+                    <div class="product-header">
+                        <span class="product-icon">📝</span>
+                        <div class="product-title">Sophisticated Letter Prompts</div>
+                        <div class="product-pages">12 pages</div>
+                    </div>
+                    <ul class="product-features">
+                        <li>9 categories of psychology-backed questions</li>
+                        <li>Moving beyond "I love you" to meaningful messages</li>
+                        <li>Difficult conversations made manageable</li>
+                        <li>Cultural adaptation for British families</li>
+                    </ul>
+                </div>
+
+                <div class="product-item">
+                    <div class="product-header">
+                        <span class="product-icon">📋</span>
+                        <div class="product-title">Memory Preservation Worksheets</div>
+                        <div class="product-pages">8 pages</div>
+                    </div>
+                    <ul class="product-features">
+                        <li>Life timeline exercises</li>
+                        <li>Values transmission templates</li>
+                        <li>Family story collection guides</li>
+                        <li>Wisdom for different life stages</li>
+                    </ul>
+                </div>
+
+                <div class="product-item">
+                    <div class="product-header">
+                        <span class="product-icon">🧭</span>
+                        <div class="product-title">Executor Emotional Support Guide</div>
+                        <div class="product-pages">6 pages</div>
+                    </div>
+                    <ul class="product-features">
+                        <li>Handling family conflicts with compassion</li>
+                        <li>When and how to deliver personal messages</li>
+                        <li>De-escalation techniques for grief situations</li>
+                        <li>UK-specific family support resources</li>
+                    </ul>
+                </div>
+
+                <div class="product-item">
+                    <div class="product-header">
+                        <span class="product-icon">🌍</span>
+                        <div class="product-title">Cultural Heritage Prompts</div>
+                        <div class="product-pages">4 pages</div>
+                    </div>
+                    <ul class="product-features">
+                        <li>Traditional British family considerations</li>
+                        <li>Multicultural and immigrant family guidance</li>
+                        <li>Regional identity preservation (Scotland, Wales, North)</li>
+                        <li>Creating new traditions that honour heritage</li>
+                    </ul>
+                </div>
+
+                <div class="product-item bonus">
+                    <div class="product-header">
+                        <span class="product-icon">🎁</span>
+                        <div class="product-title">BONUS: Letter to Grandchildren Templates</div>
+                        <div class="product-pages">4 pages</div>
+                    </div>
+                    <ul class="product-features">
+                        <li>Age-specific messages (childhood through adulthood)</li>
+                        <li>Future milestone guidance</li>
+                        <li>Generational wisdom preservation</li>
+                    </ul>
+                </div>
+
+                <div class="product-item bonus">
+                    <div class="product-header">
+                        <span class="product-icon">🎁</span>
+                        <div class="product-title">BONUS: Family Dynamics Assessment</div>
+                        <div class="product-pages">2 pages</div>
+                    </div>
+                    <ul class="product-features">
+                        <li>Customize approach for your family's communication style</li>
+                        <li>Navigate complex family relationships</li>
+                        <li>Optimize emotional impact</li>
+                    </ul>
+                </div>
+
+                <div class="value-summary">
+                    <h3>Total Value: £91 worth of professional family communication expertise</h3>
+                    <div class="value-comparison">
+                        <span class="original-price">£91</span>
+                        <span>→</span>
+                        <span class="current-price">£29</span>
+                    </div>
+                    <p><strong>Your Price Today: Just £29</strong></p>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="https://gumroad.com/dearafter" class="primary-cta">Download My Letter Kit Now<br><small>(Instant Download - No Signup Required)</small></a>
+                <p class="cta-subtext">Perfect complement to Farewill, solicitors, and any existing will</p>
+            </div>
         </div>
     </section>
 
@@ -1298,7 +1060,7 @@
                 <div class="consequence-card">
                     <span class="consequence-icon">💼</span>
                     <h3 class="consequence-title">Legal Will Covers Assets, Not Love</h3>
-                    <p class="consequence-text">Your family inherits your money but misses your heart – the explanations, stories, and emotional guidance they need most.</p>
+                    <p class="consequence-text">Your family inherits your money but misses your heart — the explanations, stories, and emotional guidance they need most.</p>
                 </div>
                 <div class="consequence-card">
                     <span class="consequence-icon">📋</span>
@@ -1308,140 +1070,7 @@
                 <div class="consequence-card">
                     <span class="consequence-icon">💔</span>
                     <h3 class="consequence-title">Emotional Wounds Last Longer Than Legal Disputes</h3>
-                    <p class="consequence-text">Families argue not just about what you left, but about what you meant – because they never heard it from you.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Introducing the Emotional Will Section -->
-    <section class="emotional-will-section">
-        <div class="container">
-            <h2 class="emotional-will-title">Introducing the Emotional Will™</h2>
-            <p class="emotional-will-intro">Your legal will protects their future.<br>Your emotional will protects their hearts.</p>
-            
-            <div class="will-comparison">
-                <div class="will-type legal">
-                    <h3 class="will-type-header">💼 Legal Will</h3>
-                    <div class="will-comparison-item">
-                        <span class="will-comparison-icon">📋</span>
-                        <span>"Who gets what"</span>
-                    </div>
-                    <div class="will-comparison-item">
-                        <span class="will-comparison-icon">⚖️</span>
-                        <span>Prevents money disputes</span>
-                    </div>
-                    <div class="will-comparison-item">
-                        <span class="will-comparison-icon">🏛️</span>
-                        <span>Required by law</span>
-                    </div>
-                </div>
-                
-                <div class="will-type emotional">
-                    <h3 class="will-type-header">❤️ Emotional Will</h3>
-                    <div class="will-comparison-item">
-                        <span class="will-comparison-icon">💕</span>
-                        <span>"Why you love them"</span>
-                    </div>
-                    <div class="will-comparison-item">
-                        <span class="will-comparison-icon">🤝</span>
-                        <span>Prevents meaning disputes</span>
-                    </div>
-                    <div class="will-comparison-item">
-                        <span class="will-comparison-icon">💝</span>
-                        <span>Required by love</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Value Stack Section -->
-    <section id="value-stack" class="value-stack">
-        <div class="container">
-            <h2 class="value-title">What's Inside</h2>
-            
-            <div class="value-intro">
-                <h3>Beyond basic templates – sophisticated emotional guidance</h3>
-                <p>While generic platforms offer simple forms, DearAfter provides culturally-intelligent, psychology-backed prompting tailored to your unique family dynamics.</p>
-            </div>
-            
-            <div class="value-container">
-                <div class="value-item">
-                    <span class="value-name">💬 <strong>Sophisticated</strong> Goodbye Letter Prompts</span>
-                    <span class="value-price">£29</span>
-                </div>
-                <div class="value-item">
-                    <span class="value-name">🧠 <strong>Expert-Crafted</strong> Executor Guidance</span>
-                    <span class="value-price">£19</span>
-                </div>
-                <div class="value-item">
-                    <span class="value-name">📘 <strong>Culturally-Intelligent</strong> Memory Worksheets</span>
-                    <span class="value-price">£15</span>
-                </div>
-                <div class="value-item">
-                    <span class="value-name">📝 <strong>Psychology-Backed</strong> Ethical Will Guide</span>
-                    <span class="value-price">£17</span>
-                </div>
-                <div class="value-item">
-                    <span class="value-name">👵 <strong>Personalized</strong> Letter to Grandkids</span>
-                    <span class="value-price">£11</span>
-                </div>
-
-                <div class="value-total">
-                    <div class="total-text">Total Value:</div>
-                    <div class="total-price">£91</div>
-                </div>
-
-                <div class="your-price">
-                    <div class="your-price-text">Yours for just</div>
-                    <div class="your-price-amount">£29</div>
-                </div>
-
-                <p><strong>Best Value:</strong> Get everything for just £29 (instead of £91)</p>
-
-                <div class="guarantee-mini">
-                    <div class="guarantee-mini-text">30-Day Peace of Mind Guarantee Included</div>
-                </div>
-
-                <div style="text-align: center;">
-                    <a href="https://gumroad.com/dearafter" class="primary-cta">Add the heart to your will<br><small>(Instant Download – No Signup Required)</small></a>
-                    <p class="cta-subtext">Perfect complement to Farewill, solicitors, and any existing will</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Comparison Section -->
-    <section class="price-anchor">
-        <div class="container">
-            <div class="price-anchor-content">
-                <h2 class="price-anchor-title">Why Specialized Emotional Guidance?</h2>
-                <div class="comparison-grid">
-                    <div class="comparison-item">
-                        <span class="comparison-service">Basic goodbye templates</span>
-                        <span class="comparison-price">Generic questions for everyone</span>
-                    </div>
-                    <div class="comparison-item">
-                        <span class="comparison-service">DearAfter</span>
-                        <span class="comparison-price">Sophisticated, culturally-intelligent prompting</span>
-                    </div>
-                    <div class="comparison-item">
-                        <span class="comparison-service">DIY emotional letters</span>
-                        <span class="comparison-price">Risk of saying the wrong thing</span>
-                    </div>
-                    <div class="comparison-item">
-                        <span class="comparison-service">DearAfter</span>
-                        <span class="comparison-price">Psychology-backed family communication</span>
-                    </div>
-                    <div class="comparison-item">
-                        <span class="comparison-service">Generic platforms</span>
-                        <span class="comparison-price">One-size-fits-all approach</span>
-                    </div>
-                    <div class="comparison-item">
-                        <span class="comparison-service"><strong>Investment in specialized expertise</strong></span>
-                        <span class="comparison-price"><strong>£29</strong></span>
-                    </div>
+                    <p class="consequence-text">Families argue not just about what you left, but about what you meant — because they never heard it from you.</p>
                 </div>
             </div>
         </div>
@@ -1453,58 +1082,24 @@
             <h2 class="social-proof-title">Trusted by families across the UK</h2>
             <div class="testimonials-grid">
                 <div class="testimonial">
-                    <p class="testimonial-text">I used a solicitor for my will, then DearAfter for my heart. My daughter said the letter meant more than the inheritance.</p>
-                    <div class="testimonial-author">Margaret, 67, Devon</div>
+                    <p class="testimonial-text">Writing this felt overwhelming at first, but the prompts made it manageable. I finished my first letter in 20 minutes and felt such relief knowing my daughter will understand my decisions.</p>
+                    <div class="testimonial-author">Patricia, 67, Retired Nurse, Manchester</div>
                 </div>
                 <div class="testimonial">
-                    <p class="testimonial-text">Legal will sorted the money. DearAfter sorted the emotions. Both were essential.</p>
-                    <div class="testimonial-author">David, 58, Edinburgh</div>
+                    <p class="testimonial-text">My executor brother was worried about family reactions to the will. The emotional guide gave him the confidence and scripts he needed to handle difficult conversations.</p>
+                    <div class="testimonial-author">David, 71, Former Teacher, Edinburgh</div>
                 </div>
                 <div class="testimonial">
-                    <p class="testimonial-text">Finally, someone who understands that families need more than just asset distribution.</p>
-                    <div class="testimonial-author">Sarah, 52, London</div>
+                    <p class="testimonial-text">As someone with early-stage dementia, this helped me capture my voice and wisdom while I still could. My family will have me with them forever.</p>
+                    <div class="testimonial-author">Margaret, 73, Grandmother of 4, Cardiff</div>
                 </div>
             </div>
 
             <div class="social-cta">
                 <p class="social-cta-text">Join 1,200+ families who've already downloaded DearAfter</p>
-                <a href="#value-stack" class="primary-cta">Add the heart to your will<br><small>(Instant Download – No Signup Required)</small></a>
+                <a href="https://gumroad.com/dearafter" class="primary-cta">Start Writing Today - Instant Access<br><small>(Instant Download - No Signup Required)</small></a>
                 <p class="cta-subtext">Perfect complement to Farewill, solicitors, and any existing will</p>
             </div>
-
-            <p class="proof-note">As featured in AgeSpace UK</p>
-        </div>
-    </section>
-
-    <!-- Integration Section -->
-    <section class="integration-section">
-        <div class="container">
-            <h2 class="integration-title">Works Perfectly With Your Existing Will</h2>
-            <p class="integration-subtitle">Already have a will? Perfect. DearAfter adds the emotional layer that legal documents miss.</p>
-            
-            <div class="compatible-services">
-                <span class="service-tag">✓ Farewill</span>
-                <span class="service-tag">✓ Co-op Legal Services</span>
-                <span class="service-tag">✓ Traditional Solicitors</span>
-                <span class="service-tag">✓ LegalZoom</span>
-                <span class="service-tag">✓ Any legal will service</span>
-            </div>
-            
-            <div class="complete-inheritance">
-                Your complete inheritance = Legal protection + Emotional connection
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works -->
-    <section class="how-it-works">
-        <div class="container">
-            <h2>How It Works</h2>
-            <ol>
-                <li><strong>Download instantly</strong> – A4 printable UK-format PDF</li>
-                <li><strong>Fill it in</strong> – guided prompts make it easy</li>
-                <li><strong>Store or send</strong> – with your will, or to loved ones directly</li>
-            </ol>
         </div>
     </section>
 
@@ -1513,24 +1108,28 @@
         <div class="container">
             <h2>Frequently Asked Questions</h2>
             <details>
+                <summary>I'm 73 and not comfortable with computers. Is this too technical?</summary>
+                <p>Not at all. Everything comes as printable PDF files. You can fill them out on your computer OR print them and write by hand - whatever feels more comfortable. Many of our customers prefer the handwritten approach as it feels more personal.</p>
+            </details>
+            <details>
+                <summary>Will my family think this is morbid or depressing?</summary>
+                <p>Quite the opposite. Most families tell us they wish they'd done this sooner because it opens beautiful conversations and brings families closer. This is about love and connection, not death and sadness.</p>
+            </details>
+            <details>
+                <summary>What if I make mistakes or change my mind?</summary>
+                <p>These aren't legal documents - they're heartfelt guidance. You can revise them anytime, cross things out, add notes. Your family will treasure the authentic you, not perfection.</p>
+            </details>
+            <details>
+                <summary>Do I need a solicitor or professional help?</summary>
+                <p>No. This is designed for anyone to use independently. However, many customers do share relevant parts with their estate planner as it helps clarify their overall intentions.</p>
+            </details>
+            <details>
                 <summary>How is this different from basic goodbye letter templates?</summary>
                 <p>Basic templates use generic questions for everyone. DearAfter provides sophisticated, culturally-intelligent guidance tailored to your specific family situation and dynamics.</p>
             </details>
             <details>
                 <summary>I already have a will - do I need this?</summary>
-                <p>Your legal will is essential for asset protection. DearAfter adds the emotional layer that legal documents can't provide – helping your family understand not just what you decided, but why you love them.</p>
-            </details>
-            <details>
-                <summary>Why not just write a letter myself?</summary>
-                <p>You could. But would you perform surgery on yourself instead of using a specialist? DearAfter brings expertise in family communication and emotional guidance to ensure your message lands exactly as you intend.</p>
-            </details>
-            <details>
-                <summary>Can I fill this out digitally?</summary>
-                <p>Yes – it's a fillable PDF. You can also print it out if you prefer handwriting.</p>
-            </details>
-            <details>
-                <summary>Do I need a solicitor to use this?</summary>
-                <p>No – it's designed to be used by anyone. Some users also share it with their estate planner.</p>
+                <p>Your legal will is essential for asset protection. DearAfter adds the emotional layer that legal documents can't provide — helping your family understand not just what you decided, but why you love them.</p>
             </details>
         </div>
     </section>
@@ -1540,40 +1139,13 @@
         <div class="container">
             <div class="guarantee-container">
                 <span class="guarantee-icon">🛡️</span>
-                <h2 class="guarantee-title">30-Day Peace of Mind Guarantee</h2>
-                <p class="guarantee-text">If it doesn't help you or your family feel closer and clearer – we'll refund you in full – no hassle.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Value Props Section -->
-    <section class="value-props">
-        <div class="container">
-            <div class="value-props-grid">
-                <div class="value-prop-item">
-                    <span class="value-prop-icon">🎯</span>
-                    <h3 class="value-prop-title">Specialized Expertise</h3>
-                    <p class="value-prop-text">Psychology-backed approach to family communication</p>
-                </div>
-                <div class="value-prop-item">
-                    <span class="value-prop-icon">🌍</span>
-                    <h3 class="value-prop-title">Cultural Intelligence</h3>
-                    <p class="value-prop-text">Prompts adapted for different backgrounds and traditions</p>
-                </div>
-                <div class="value-prop-item">
-                    <span class="value-prop-icon">👨‍👩‍👧‍👦</span>
-                    <h3 class="value-prop-title">Family Dynamics</h3>
-                    <p class="value-prop-text">Sophisticated understanding of complex family relationships</p>
-                </div>
-                <div class="value-prop-item">
-                    <span class="value-prop-icon">✨</span>
-                    <h3 class="value-prop-title">Premium Experience</h3>
-                    <p class="value-prop-text">Professional design and expert guidance</p>
-                </div>
-                <div class="value-prop-item">
-                    <span class="value-prop-icon">🔄</span>
-                    <h3 class="value-prop-title">Ongoing Refinement</h3>
-                    <p class="value-prop-text">Continuously updated based on family feedback</p>
+                <h2 class="guarantee-title">"Complete Peace of Mind" Guarantee</h2>
+                <p class="guarantee-text">Try DearAfter risk-free for 60 days. If creating these emotional documents doesn't help you and your family feel closer and more prepared, we'll refund every penny.</p>
+                <p class="guarantee-text"><strong>No questions asked. No forms to fill. No hassle whatsoever.</strong></p>
+                <div class="guarantee-stats">
+                    <strong>Why we're confident:</strong> Over 1,200+ UK families have used DearAfter to bridge the gap between legal documents and family hearts.
+                    <br><br>
+                    <em>You can trust this investment in your family's emotional future.</em>
                 </div>
             </div>
         </div>
@@ -1584,8 +1156,8 @@
         <div class="container">
             <h2 class="final-cta-title">Complete Your Family's Inheritance</h2>
             <p class="final-cta-subtitle">Your legal will protects their future. Your emotional will protects their hearts.<br>Give your family the complete inheritance: Your assets AND your love.</p>
-            <a href="https://gumroad.com/dearafter" class="primary-cta">Complete your family's inheritance<br><small>(Instant download - transforms any will into a love letter)</small></a>
-            <p class="cta-subtext">Offer ends 30 September – download now while bonuses are still available.</p>
+            <a href="https://gumroad.com/dearafter" class="primary-cta">Start Writing Today - Instant Access<br><small>(Instant download - transforms any will into a love letter)</small></a>
+            <p class="cta-subtext">Secure your current £29 price before November 1st increase to £49</p>
         </div>
     </section>
 

@@ -42,12 +42,43 @@
             padding: 0 20px;
         }
 
+        /* Scarcity Bar */
+        .scarcity-bar {
+            background: linear-gradient(135deg, var(--urgent-red) 0%, #D32F2F 100%);
+            color: white;
+            padding: 12px 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1001;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .scarcity-bar a {
+            background: white;
+            color: var(--urgent-red);
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .scarcity-bar a:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 10px rgba(255,255,255,0.3);
+        }
+
         /* Navigation */
         .navbar {
             background: rgba(254, 252, 248, 0.97);
             backdrop-filter: blur(12px);
             position: fixed;
-            top: 0;
+            top: 40px;
             width: 100%;
             z-index: 1000;
             border-bottom: 1px solid rgba(201, 169, 110, 0.2);
@@ -130,7 +161,7 @@
 
         /* Hero Section */
         .hero {
-            padding: 120px 20px 80px;
+            padding: 160px 20px 80px;
             text-align: center;
             background: linear-gradient(135deg, var(--ivory) 0%, #F6F8FA 100%);
         }
@@ -319,15 +350,6 @@
             line-height: 1.3;
         }
 
-        .section-title {
-            text-align: center;
-            font-size: 2.8rem;
-            color: var(--primary-navy);
-            margin-bottom: 40px;
-            font-weight: 300;
-            line-height: 1.3;
-        }
-
         .product-overview {
             max-width: 900px;
             margin: 0 auto 60px;
@@ -506,172 +528,6 @@
             font-size: 1.3rem;
             color: var(--dark-text);
             line-height: 1.8;
-        }
-
-        /* Pricing Section */
-        .pricing-section {
-            padding: 80px 20px;
-            background: #fafafa;
-        }
-
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .pricing-card {
-            background: #fff;
-            border: 2px solid #e5e7eb;
-            border-radius: 16px;
-            padding: 40px 30px;
-            position: relative;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .pricing-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .pricing-featured {
-            border-color: var(--warm-gold);
-            box-shadow: 0 8px 25px rgba(184, 148, 31, 0.2);
-            transform: scale(1.05);
-        }
-
-        .pricing-featured:hover {
-            transform: scale(1.05) translateY(-5px);
-        }
-
-        .pricing-badge {
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: var(--primary-navy);
-            margin-bottom: 15px;
-        }
-
-        .pricing-price {
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--primary-navy);
-            margin: 10px 0 15px;
-        }
-
-        .pricing-sub {
-            color: var(--soft-grey);
-            margin-bottom: 25px;
-            font-size: 1.1rem;
-            line-height: 1.4;
-        }
-
-        .pricing-features {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 30px;
-            text-align: left;
-        }
-
-        .pricing-features li {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            margin-bottom: 12px;
-            font-size: 1rem;
-            line-height: 1.5;
-            color: var(--medium-text);
-        }
-
-        .pricing-features li::before {
-            content: "✓";
-            color: var(--success-green);
-            font-weight: bold;
-            margin-top: 2px;
-            flex-shrink: 0;
-        }
-
-        .most-popular {
-            position: absolute;
-            top: -12px;
-            right: 20px;
-            background: var(--warm-gold);
-            color: var(--primary-navy);
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 15px 30px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            font-family: Georgia, serif;
-            cursor: pointer;
-            border: none;
-        }
-
-        .btn-primary {
-            background: var(--primary-navy);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: #243A5E;
-            transform: translateY(-2px);
-        }
-
-        .btn-accent {
-            background: var(--warm-gold);
-            color: var(--primary-navy);
-        }
-
-        .btn-accent:hover {
-            background: #D4B574;
-            transform: translateY(-2px);
-        }
-
-        .pricing-note {
-            text-align: center;
-            margin-top: 40px;
-            color: var(--soft-grey);
-            font-style: italic;
-            font-size: 1rem;
-        }
-
-        /* Video Teaser */
-        .video-teaser {
-            padding: 60px 20px;
-            background: white;
-            text-align: center;
-        }
-
-        .video-frame {
-            border-radius: 12px;
-            overflow: hidden;
-            border: 2px solid #e5e7eb;
-            max-width: 600px;
-            margin: 0 auto 20px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        .video-frame video {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .muted {
-            color: var(--soft-grey);
-            font-style: italic;
-            font-size: 0.95rem;
         }
 
         /* Social Proof Section */
@@ -930,6 +786,13 @@
 
         /* Responsive Design */
         @media (max-width: 480px) {
+            .scarcity-bar {
+                flex-direction: column;
+                gap: 8px;
+                padding: 8px 15px;
+                font-size: 13px;
+            }
+
             .nav-logo {
                 height: 30px;
             }
@@ -1036,29 +899,6 @@
             }
         }
 
-        @media (max-width: 768px) {
-            .pricing-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .pricing-featured {
-                transform: none;
-            }
-
-            .pricing-featured:hover {
-                transform: translateY(-5px);
-            }
-
-            .pricing-card {
-                padding: 30px 20px;
-            }
-
-            .pricing-price {
-                font-size: 2.5rem;
-            }
-        }
-
         @media (min-width: 768px) {
             .consequences-grid {
                 grid-template-columns: repeat(3, 1fr);
@@ -1144,6 +984,12 @@
     </style>
 </head>
 <body id="top">
+    <!-- Scarcity Bar -->
+    <div id="scarcityBar" class="scarcity-bar">
+        <span>Early access batch closes in <strong id="countdown">00:00:00</strong></span>
+        <a href="#whats-inside" class="nav-cta">Get the £29 Kit</a>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-content">
@@ -1154,11 +1000,10 @@
             <ul class="nav-links">
                 <li><a href="#how-it-works">How It Works</a></li>
                 <li><a href="#whats-inside">What's Inside</a></li>
-                <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#social-proof">Testimonials</a></li>
                 <li><a href="#guarantee">Guarantee</a></li>
             </ul>
-            <a href="#pricing" class="nav-cta">Get the Kit</a>
+            <a href="#whats-inside" class="nav-cta">Get the £29 Kit</a>
         </div>
     </nav>
 
@@ -1169,7 +1014,7 @@
                 <h1>UK parents & grandparents start their first legacy letter in <strong>30 minutes</strong></h1>
                 <h2>DearAfter™ Emotional Companion Kit — the emotional layer your legal will can't provide. Complete their inheritance: <em>your assets and your love</em>.</h2>
                 
-                <a href="#pricing" class="primary-cta">Start My Letter — £39<br><small>(Instant download - Print & start today)</small></a>
+                <a href="#whats-inside" class="primary-cta">Start My Letter — £29<br><small>(Instant download - Print & start today)</small></a>
                 <p class="cta-subtext">Works with Farewill, solicitors & any existing will</p>
                 
                 <div class="trust-indicators">
@@ -1235,7 +1080,7 @@
     <!-- What's Inside Section -->
     <section id="whats-inside" class="whats-inside-section">
         <div class="container">
-            <h2 class="whats-inside-title">What you get (57 pages total)</h2>
+            <h2 class="whats-inside-title">What you get for £29 (57 pages)</h2>
             
             <div class="product-overview">
                 <div class="product-item">
@@ -1295,6 +1140,19 @@
                     </div>
                     <p>"The thing I never found the right moment to tell you is…", "The most important life principle I've learned is…", "When you miss me most, I want you to…"</p>
                 </div>
+
+                <div class="value-summary">
+                    <h3>Everything to finish 3 letters this week</h3>
+                    <div class="value-comparison">
+                        <span class="current-price">£29</span>
+                    </div>
+                    <p><strong>Instant download</strong> · Print-friendly · Fillable where noted</p>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="https://gumroad.com/dearafter" class="primary-cta">Get My Letter Kit Now — £29<br><small>(Instant download - Start in 30 minutes)</small></a>
+                <p class="cta-subtext">Works with Farewill, solicitors & any existing will</p>
             </div>
         </div>
     </section>
@@ -1323,73 +1181,6 @@
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing-section">
-        <div class="container">
-            <h2 class="section-title">Choose your DearAfter Kit</h2>
-            <div class="pricing-grid">
-                <!-- Basic -->
-                <div class="pricing-card">
-                    <div class="pricing-badge">Basic</div>
-                    <div class="pricing-price">£39</div>
-                    <p class="pricing-sub">The original 57-page kit (UK-ready)</p>
-                    <ul class="pricing-features">
-                        <li>Main Guide (16p), Templates (30p), Bonuses (6p), Quick-Start + How-To (5p)</li>
-                        <li>Works with any will · Instant download</li>
-                        <li>Two guarantees included</li>
-                    </ul>
-                    <a href="https://gumroad.com/dearafter?option=basic" class="btn btn-primary">Get Basic — £39</a>
-                </div>
-                
-                <!-- Premium -->
-                <div class="pricing-card pricing-featured">
-                    <div class="most-popular">Most popular</div>
-                    <div class="pricing-badge">Premium</div>
-                    <div class="pricing-price">£49</div>
-                    <p class="pricing-sub">Finish faster with audio + templates</p>
-                    <ul class="pricing-features">
-                        <li>Everything in Basic</li>
-                        <li><strong>Audio prompts</strong> for 12 categories</li>
-                        <li><strong>3 letter styles</strong> (concise / story / dialogue)</li>
-                        <li><strong>Print-ready covers</strong> (giftable)</li>
-                    </ul>
-                    <a href="https://gumroad.com/dearafter?option=premium" class="btn btn-accent">Upgrade to Premium — £49</a>
-                </div>
-                
-                <!-- Complete -->
-                <div class="pricing-card">
-                    <div class="pricing-badge">Complete</div>
-                    <div class="pricing-price">£99</div>
-                    <p class="pricing-sub">Best guidance + formats unlocked</p>
-                    <ul class="pricing-features">
-                        <li>Everything in Premium</li>
-                        <li><strong>Mini-video course</strong> (60–90 min)</li>
-                        <li><strong>All fillable PDFs unlocked</strong></li>
-                        <li><strong>Executor briefing pack</strong> (1-page cue + checklists)</li>
-                    </ul>
-                    <a href="https://gumroad.com/dearafter?option=complete" class="btn btn-primary">Get Complete — £99</a>
-                </div>
-            </div>
-            <p class="pricing-note">All options include the <em>Three-Letter Promise</em> and <em>30-Minute Quick-Start</em> guarantees.</p>
-        </div>
-    </section>
-
-    <!-- Mini-Video Teaser -->
-    <section class="video-teaser">
-        <div class="container">
-            <h3 class="section-title">See how simple this can be</h3>
-            <div class="video-frame">
-                <!-- Replace with your actual Vimeo/YouTube embed or video file -->
-                <video controls preload="metadata" poster="/assets/dearafter-poster.jpg" aria-label="DearAfter mini-course teaser">
-                    <source src="/assets/dearafter-teaser.mp4" type="video/mp4">
-                    <source src="/assets/dearafter-teaser.webm" type="video/webm">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <p class="muted">The full mini-course is included in the Complete kit.</p>
-        </div>
-    </section>
-
     <!-- Social Proof Section -->
     <section id="social-proof" class="social-proof">
         <div class="container">
@@ -1411,7 +1202,7 @@
 
             <div class="social-cta">
                 <p class="social-cta-text">Join 200+ families currently using DearAfter to complete their inheritance</p>
-                <a href="#pricing" class="primary-cta">Choose Your Kit<br><small>(Instant download - 30-minute start)</small></a>
+                <a href="https://gumroad.com/dearafter" class="primary-cta">Start My Letters Today — £29<br><small>(Instant download - 30-minute start)</small></a>
                 <p class="cta-subtext">Works with Farewill, solicitors & any existing will</p>
             </div>
         </div>
@@ -1454,7 +1245,7 @@
             <div class="guarantee-container">
                 <h2 class="guarantee-title">Two guarantees that remove all risk</h2>
                 <ul class="guarantee-list">
-                    <li><strong>Three-Letter Promise:</strong> Write 3 letters in 7 days using our prompts — or we'll refund your money within 60 days.</li>
+                    <li><strong>Three-Letter Promise:</strong> Write 3 letters in 7 days using our prompts — or we'll refund your £29 within 60 days.</li>
                     <li><strong>30-Minute Quick-Start:</strong> If our checklist can't get you started in ~30 minutes, claim a full refund.</li>
                 </ul>
             </div>
@@ -1466,15 +1257,10 @@
         <div class="container">
             <h2 class="final-cta-title">Complete Your Family's Inheritance</h2>
             <p class="final-cta-subtitle">Your legal will protects their future. Your emotional will protects their hearts.<br>Give your family the complete inheritance: Your assets AND your love.</p>
-            <a href="#pricing" class="primary-cta">Choose Your Kit<br><small>(Instant access to 57 pages - transforms any will into a love letter)</small></a>
+            <a href="https://gumroad.com/dearafter" class="primary-cta">Start Writing Today — £29<br><small>(Instant access to 57 pages - transforms any will into a love letter)</small></a>
             <p class="cta-subtext">30-minute quick start · Works with any UK will</p>
         </div>
     </section>
-
-    <!-- Hidden anchor sections for buy links -->
-    <section id="buy-basic" hidden></section>
-    <section id="buy-premium" hidden></section>
-    <section id="buy-complete" hidden></section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -1502,29 +1288,12 @@
             "name": "DearAfter"
         },
         "description": "Start your first legacy letter in ~30 minutes. UK-ready prompts, guides & worksheets (57 pages).",
-        "offers": [
-            {
-                "@type": "Offer",
-                "name": "Basic Kit",
-                "price": "39",
-                "priceCurrency": "GBP",
-                "availability": "https://schema.org/InStock"
-            },
-            {
-                "@type": "Offer",
-                "name": "Premium Kit",
-                "price": "49",
-                "priceCurrency": "GBP",
-                "availability": "https://schema.org/InStock"
-            },
-            {
-                "@type": "Offer",
-                "name": "Complete Kit",
-                "price": "99",
-                "priceCurrency": "GBP",
-                "availability": "https://schema.org/InStock"
-            }
-        ]
+        "offers": {
+            "@type": "Offer",
+            "price": "29",
+            "priceCurrency": "GBP",
+            "availability": "https://schema.org/InStock"
+        }
     }
     </script>
     <script type="application/ld+json">
@@ -1558,6 +1327,32 @@
             }
         ]
     }
+    </script>
+    <script>
+        // Weekly countdown (closes Sunday 23:59)
+        (function(){
+            const el = document.getElementById('countdown');
+            if(!el) return;
+            
+            const deadline = (function(){
+                const d = new Date();
+                const day = d.getDay();
+                const diff = (7 - day) % 7;
+                d.setDate(d.getDate() + diff);
+                d.setHours(23, 59, 59, 999);
+                return d.getTime();
+            })();
+            
+            setInterval(function(){
+                const t = deadline - Date.now();
+                const h = Math.max(0, Math.floor(t / 3600000));
+                const m = Math.max(0, Math.floor((t % 3600000) / 60000));
+                const s = Math.max(0, Math.floor((t % 60000) / 1000));
+                el.textContent = String(h).padStart(2, '0') + ':' + 
+                                String(m).padStart(2, '0') + ':' + 
+                                String(s).padStart(2, '0');
+            }, 1000);
+        })();
     </script>
 </body>
 </html>

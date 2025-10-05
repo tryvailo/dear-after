@@ -3,322 +3,865 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DearAfter™ Letter Kit — Start Your First Legacy Letter in 30 Minutes (UK) | £29</title>
-    <meta name="description" content="UK parents & grandparents: start your first legacy letter in ~30 minutes. DearAfter™ Emotional Companion Kit — 57 pages of UK-ready guides, prompts & worksheets. £29.">
+    <title>DearAfter™ Letter Kit – Start Your First Legacy Letter in 30 Minutes (UK) | £29</title>
+    <meta name="description" content="UK parents & grandparents: start your first legacy letter in ~30 minutes. DearAfter™ Emotional Companion Kit – 57 pages of UK-ready guides, prompts & worksheets. £29.">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_32x32.png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600&family=Dancing+Script:wght@400;700&display=swap');
+        
+        :root {
+            /* Fonts */
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Open Sans', sans-serif;
+            --font-accent: 'Dancing Script', cursive;
+            
+            /* Colors */
+            --color-primary: #1e3a8a;
+            --color-secondary: #f59e0b;
+            --color-bg-light: #f3f4f6;
+            --color-text: #374151;
+            --color-link: #3b82f6;
+            --color-white: #ffffff;
+        }
         
         body {
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.8;
-            background-color: #fefcf8;
-            color: #1a1a1a;
-            font-size: 1.25rem; /* Base font size increased for readability */
+            font-family: var(--font-body);
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 1.6;
+            background-color: var(--color-bg-light);
+            color: var(--color-text);
         }
+        
+        /* Typography Hierarchy */
+        h1 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 72px;
+            line-height: 1.15;
+            margin-bottom: 32px;
+            color: var(--color-primary);
+        }
+        
+        h2 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 1.25;
+            margin-bottom: 24px;
+            color: var(--color-primary);
+        }
+        
+        h3 {
+            font-family: var(--font-heading);
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 1.4;
+            margin-bottom: 16px;
+            color: var(--color-primary);
+        }
+        
+        h4 {
+            font-family: var(--font-heading);
+            font-weight: 500;
+            font-size: 26px;
+            margin-bottom: 12px;
+            color: var(--color-primary);
+        }
+        
+        p, li {
+            font-family: var(--font-body);
+            font-size: 20px;
+            line-height: 1.7;
+            color: var(--color-text);
+        }
+        
+        /* Mobile Typography */
+        @media (max-width: 768px) {
+            h1 { 
+                font-size: 44px; 
+                line-height: 1.2; 
+                margin-bottom: 20px;
+            }
+            h2 { 
+                font-size: 38px; 
+                line-height: 1.25;
+                margin-bottom: 18px; 
+            }
+            h3 { 
+                font-size: 28px; 
+                line-height: 1.3;
+                margin-bottom: 14px; 
+            }
+            h4 { 
+                font-size: 24px; 
+                line-height: 1.35;
+                margin-bottom: 12px; 
+            }
+            body, p, li { 
+                font-size: 18px; 
+                line-height: 1.7; 
+            }
+            
+            .btn { 
+                width: 100%; 
+                padding: 18px 24px; 
+                font-size: 20px;
+                min-height: 56px;
+            }
+            
+            nav a { 
+                font-size: 18px;
+                font-weight: 600; 
+            }
+            
+            footer { padding: 40px 0; }
+            footer a { 
+                font-size: 19px;
+                display: inline-block;
+                margin: 8px 0;
+            }
+            footer p { 
+                font-size: 18px;
+                margin-bottom: 16px; 
+            }
+            .disclaimer { 
+                font-size: 16px;
+                margin-bottom: 16px; 
+            }
+            
+            .step-number {
+                width: 48px;
+                height: 48px;
+                font-size: 24px;
+            }
+            
+            .icon {
+                width: 52px;
+                height: 52px;
+            }
+            
+            details summary {
+                font-size: 20px;
+                line-height: 1.4;
+                padding: 18px 16px;
+            }
+            
+            details summary::before {
+                font-size: 24px;
+                margin-right: 8px;
+            }
+            
+            details {
+                margin-bottom: 12px;
+            }
+            
+            /* Hero section mobile specific */
+            section:first-of-type h1 {
+                font-size: 38px !important;
+            }
+            
+            section:first-of-type p {
+                font-size: 20px !important;
+            }
+            
+            section:first-of-type .accent-script {
+                font-size: 26px !important;
+            }
+        }
+        
+        /* Tablet optimization */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            h1 { font-size: 64px; }
+            h2 { font-size: 44px; }
+            h3 { font-size: 30px; }
+            
+            body, p, li { font-size: 19px; }
+        }
+        
+        /* Large desktop optimization */
+        @media (min-width: 1440px) {
+            h1 { font-size: 80px; }
+            h2 { font-size: 52px; }
+            h3 { font-size: 36px; }
+            
+            body, p, li { font-size: 21px; }
+            
+            .btn { font-size: 22px; padding: 20px 44px; }
+        }
+        
+        /* Hero section mobile optimization */
+        @media (max-width: 768px) {
+            section.py-24 {
+                padding-top: 48px !important;
+                padding-bottom: 48px !important;
+            }
+        }
+        
+        /* Ensure high contrast ratios */
+        @media (prefers-contrast: high) {
+            body {
+                color: #000000;
+            }
+            
+            footer {
+                background-color: #0f172a;
+            }
+            
+            footer a,
+            footer p,
+            .disclaimer {
+                color: #ffffff !important;
+            }
+        }
+        
+        .accent-script {
+            font-family: var(--font-accent);
+            font-weight: 400;
+            color: var(--color-secondary);
+        }
+        
+        /* Layout */
         .container {
-            max-width: 1100px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
-        .text-navy { color: #0f1b3c; }
-        .bg-navy { background-color: #0f1b3c; }
-        .text-gold { color: #b8941f; }
-        .bg-gold { background-color: #b8941f; }
-        .shadow-soft {
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        
+        .text-block {
+            max-width: 700px;
+            margin: 0 auto;
         }
+        
+        section {
+            padding: 48px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .container { padding: 0 16px; }
+            section { padding: 32px 0; }
+        }
+        
+        /* Dividers */
+        hr, .section-divider {
+            border: 0;
+            height: 1px;
+            background: var(--color-primary);
+            margin: 48px auto;
+            max-width: 200px;
+            opacity: 0.2;
+        }
+        
+        /* Buttons with Enhanced Accessibility */
+        .btn {
+            display: inline-block;
+            font-family: var(--font-heading);
+            font-size: 20px;
+            font-weight: 600;
+            padding: 16px 32px;
+            min-height: 44px;
+            min-width: 44px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-decoration: none;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .btn:focus {
+            outline: 3px solid var(--color-link);
+            outline-offset: 2px;
+        }
+        
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--color-secondary);
+            color: var(--color-primary);
+        }
+        
+        .btn-secondary {
+            background-color: var(--color-secondary);
+            color: var(--color-primary);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+        }
+        
+        @media (max-width: 768px) {
+            .btn {
+                width: 100%;
+                padding: 14px;
+                font-size: 18px;
+            }
+        }
+        
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        nav a {
+            font-family: var(--font-heading);
+            font-size: 20px;
+            color: var(--color-text);
+            text-decoration: none;
+            transition: color 0.2s ease;
+            font-weight: 600;
+        }
+        
+        nav a:hover {
+            color: var(--color-primary);
+        }
+        
+        nav a:focus {
+            outline: 3px solid var(--color-link);
+            outline-offset: 2px;
+        }
+        
+        @media (max-width: 768px) {
+            nav a { font-size: 18px; }
+            
+            nav .container {
+                padding: 16px;
+            }
+        }
+        
+        /* Cards */
+        .card {
+            background: var(--color-white);
+            border-radius: 8px;
+            padding: 32px 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+        
+        /* Step Numbers */
+        .step-number {
+            width: 52px;
+            height: 52px;
+            background: var(--color-secondary);
+            color: var(--color-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-family: var(--font-heading);
+            font-size: 26px;
+        }
+        
+        /* Background Patterns */
+        .bg-pattern-light {
+            background-image: 
+                repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(30, 58, 138, 0.02) 35px, rgba(30, 58, 138, 0.02) 70px);
+        }
+        
+        .bg-navy {
+            background-color: var(--color-primary);
+        }
+        
+        .bg-navy * {
+            color: #ffffff !important;
+        }
+        
+        .bg-navy h1,
+        .bg-navy h2,
+        .bg-navy h3,
+        .bg-navy h4,
+        .bg-navy p,
+        .bg-navy span {
+            color: #ffffff !important;
+        }
+        
+        .bg-light {
+            background-color: var(--color-bg-light);
+        }
+        
+        .text-navy {
+            color: var(--color-primary);
+        }
+        
+        .text-gold {
+            color: var(--color-secondary);
+        }
+        
+        .border-gold {
+            border-color: var(--color-secondary);
+        }
+        
+        .border-navy {
+            border-color: var(--color-primary);
+        }
+        
+        /* Icons */
+        .icon {
+            width: 56px;
+            height: 56px;
+            stroke-width: 1.5;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #1e3a8a;
+            color: #ffffff;
+            font-size: 19px;
+            padding: 56px 0;
+            line-height: 1.7;
+        }
+        
+        footer * {
+            color: #ffffff !important;
+        }
+        
+        footer a {
+            color: #ffffff !important;
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 4px;
+            transition: all 0.2s ease;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        footer a:hover {
+            color: #f59e0b !important;
+            text-decoration-color: #f59e0b;
+            transform: translateY(-1px);
+        }
+        
+        footer a:focus {
+            outline: 3px solid #f59e0b;
+            outline-offset: 4px;
+        }
+        
+        footer p {
+            color: #ffffff !important;
+            font-size: 19px;
+            line-height: 1.7;
+        }
+        
+        .disclaimer {
+            font-size: 17px;
+            font-style: italic;
+            line-height: 1.7;
+            color: #ffffff !important;
+        }
+        
+        /* Details/Accordion */
+        details {
+            cursor: pointer;
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        
+        details:hover {
+            border-color: #f59e0b;
+            box-shadow: 0 2px 8px rgba(245, 158, 11, 0.15);
+        }
+        
+        details summary {
+            cursor: pointer;
+            list-style: none;
+            font-weight: 700;
+            color: var(--color-primary);
+            font-size: 22px;
+            padding: 20px 24px;
+            line-height: 1.4;
+            background: linear-gradient(to right, #f3f4f6, #ffffff);
+            transition: background 0.2s ease;
+        }
+        
+        details summary:hover {
+            background: linear-gradient(to right, #fef3c7, #ffffff);
+        }
+        
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+        
+        details summary::before {
+            content: '+';
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--color-secondary);
+            margin-right: 12px;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        
+        details[open] summary::before {
+            content: '−';
+            transform: rotate(0deg);
+        }
+        
+        details summary:focus {
+            outline: 3px solid var(--color-link);
+            outline-offset: 2px;
+        }
+        
+        details[open] {
+            border-color: var(--color-secondary);
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+        }
+        
+        details[open] summary {
+            background: linear-gradient(to right, #fef3c7, #ffffff);
+            border-bottom: 2px solid #f59e0b;
+        }
+        
+        /* Utility Classes */
+        .max-w-4xl { max-width: 896px; }
+        .max-w-3xl { max-width: 768px; }
+        .max-w-2xl { max-width: 672px; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .mb-4 { margin-bottom: 16px; }
+        .mb-6 { margin-bottom: 24px; }
+        .mb-8 { margin-bottom: 32px; }
+        .mb-12 { margin-bottom: 48px; }
+        .mt-12 { margin-top: 48px; }
+        .mt-16 { margin-top: 64px; }
+        .py-4 { padding-top: 16px; padding-bottom: 16px; }
+        .py-24 { padding-top: 96px; padding-bottom: 96px; }
+        .text-center { text-align: center; }
     </style>
 </head>
-<body class="antialiased">
+<body>
 
 <!-- Navigation -->
-<nav class="sticky top-0 z-50 bg-ivory bg-opacity-95 backdrop-blur-md border-b border-gray-200">
+<nav role="navigation" aria-label="Main navigation">
     <div class="container flex justify-between items-center py-4">
-        <a href="#" class="font-bold text-2xl text-navy">DearAfter™</a>
-        <a href="#pricing" class="px-6 py-2 bg-navy text-white text-base font-semibold rounded-lg shadow-lg hover:bg-gold transition-colors">Get the Kit</a>
+        <a href="#" class="flex items-center space-x-2" aria-label="DearAfter Home">
+            <div class="w-12 h-12 bg-navy rounded-full flex items-center justify-center">
+                <span class="text-white font-bold text-2xl">D</span>
+            </div>
+            <span class="font-bold text-2xl text-navy" style="font-family: var(--font-heading);">DearAfter™</span>
+        </a>
+        <a href="#pricing" class="btn btn-primary" style="font-size: 20px;" aria-label="Get the Kit">Get the Kit</a>
     </div>
 </nav>
 
 <!-- Hero Section -->
-<section class="hero bg-ivory pt-24 pb-20 text-center">
-    <div class="container">
-        <div class="hero-content max-w-4xl mx-auto">
-            <h1 class="text-5xl md:text-6xl lg:text-7xl font-light text-navy mb-6 leading-tight tracking-tight">
-                UK parents & grandparents start their first legacy letter in <strong class="font-bold">30 minutes</strong>
-            </h1>
-            <p class="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto mb-12">
-                DearAfter™ Emotional Companion Kit — the emotional layer your legal will can't provide. Complete their inheritance: <em class="italic">your assets and your love</em>.
+<section class="py-24 bg-pattern-light" style="background: linear-gradient(to bottom, #ffffff, #f3f4f6); padding-top: 80px; padding-bottom: 80px;">
+    <div class="container text-center">
+        <h1 class="text-navy mb-6 max-w-4xl mx-auto" style="font-size: 72px; line-height: 1.15;">
+            UK parents & grandparents start their first legacy letter in <span class="text-gold" style="font-weight: 700;">30 minutes</span>
+        </h1>
+        <div class="text-block">
+            <p class="mb-8" style="font-size: 26px; line-height: 1.75; color: #1f2937; font-weight: 400;">
+                DearAfter™ Emotional Companion Kit – the emotional layer your legal will can't provide. Complete their inheritance: <span class="accent-script" style="font-size: 34px; font-weight: 700;">your assets and your love</span>.
             </p>
-            <a href="#pricing" class="inline-block bg-navy text-white text-xl px-10 py-5 rounded-xl shadow-lg hover:bg-gold hover:text-navy transition-colors transform hover:-translate-y-1">
-                Start My Letter — £39<br><span class="block text-sm font-normal opacity-80 mt-1">(Instant download - Print & start today)</span>
-            </a>
-            <p class="text-lg text-gray-500 mt-4 italic">Works with Farewill, solicitors & any existing will</p>
-            
-            <div class="flex flex-wrap justify-center gap-10 mt-12 text-base text-gray-500 font-medium">
-                <div class="flex items-center space-x-2">
-                    <i class="fas fa-check-circle text-lime-600"></i>
-                    <span>30-Minute Quick Start</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                    <i class="fas fa-check-circle text-lime-600"></i>
-                    <span>Works with any will</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                    <i class="fas fa-check-circle text-lime-600"></i>
-                    <span>UK-adapted content (57 pages)</span>
-                </div>
+        </div>
+        <a href="#pricing" class="btn btn-primary" style="font-size: 26px; padding: 22px 44px; font-weight: 700;" aria-label="Start My Letter for £39">
+            Start My Letter – £39<br>
+            <span style="font-size: 19px; font-weight: 400; opacity: 0.95;">(Instant download - Print & start today)</span>
+        </a>
+        <p class="mt-4" style="color: #374151; font-style: italic; font-size: 19px; font-weight: 500;">Works with Farewill, solicitors & any existing will</p>
+        
+        <div class="flex flex-wrap justify-center gap-8 mt-12" style="font-weight: 600; font-size: 19px; color: #1f2937;">
+            <div class="flex items-center space-x-3">
+                <svg class="w-8 h-8" style="color: #10b981; flex-shrink: 0;" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>30-Minute Quick Start</span>
             </div>
-            <div class="mt-16 max-w-3xl mx-auto">
-                <img src="hero-elderly2.png" alt="A photo of an elderly woman using her phone." class="w-full rounded-xl shadow-2xl">
+            <div class="flex items-center space-x-3">
+                <svg class="w-8 h-8" style="color: #10b981; flex-shrink: 0;" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>Works with any will</span>
             </div>
+            <div class="flex items-center space-x-3">
+                <svg class="w-8 h-8" style="color: #10b981; flex-shrink: 0;" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>UK-adapted content (57 pages)</span>
+            </div>
+        </div>
+        
+        <div class="mt-16 max-w-3xl mx-auto">
+            <img src="hero-elderly2.png" alt="Elderly woman comfortably using her phone to write a legacy letter" style="width: 100%; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
         </div>
     </div>
 </section>
 
 <!-- How It Works Section -->
-<section id="how-it-works" class="py-20 bg-white">
-    <div class="container text-center">
-        <h2 class="text-4xl md:text-5xl font-light text-navy mb-12">How to start in 30 minutes (5 simple steps)</h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-5xl mx-auto">
-            <div class="p-8 bg-gray-50 rounded-xl shadow-soft border-l-4 border-lime-600 relative">
-                <div class="absolute top-0 left-4 -translate-y-1/2 bg-lime-600 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold text-lg">1</div>
-                <h3 class="text-2xl font-semibold text-navy mb-2 pt-6">Download & Print</h3>
-                <p class="text-gray-600">Get your 57-page kit instantly. Print the Quick-Start Checklist (1 page) and pick 2 prompts to begin.</p>
+<section class="py-24 bg-white">
+    <div class="container">
+        <h2 class="text-center mb-4">How to start in 30 minutes</h2>
+        <p class="text-center mb-12" style="font-size: 22px; color: #374151; font-weight: 500;">5 simple steps</p>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="card border-l-4 border-gold relative">
+                <div class="step-number absolute -top-6 left-6" aria-label="Step 1">1</div>
+                <h3 class="pt-6 mb-3">Download & Print</h3>
+                <p style="color: #374151; font-size: 19px;">Get your 57-page kit instantly. Print the Quick-Start Checklist (1 page) and pick 2 prompts to begin.</p>
             </div>
-            <div class="p-8 bg-gray-50 rounded-xl shadow-soft border-l-4 border-lime-600 relative">
-                <div class="absolute top-0 left-4 -translate-y-1/2 bg-lime-600 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold text-lg">2</div>
-                <h3 class="text-2xl font-semibold text-navy mb-2 pt-6">Choose Your First Letter</h3>
-                <p class="text-gray-600">Start with one person you love. Use our Cultural Heritage guide if you're from Scotland, Wales, or immigrant families.</p>
+            
+            <div class="card border-l-4 border-gold relative">
+                <div class="step-number absolute -top-6 left-6" aria-label="Step 2">2</div>
+                <h3 class="pt-6 mb-3">Choose Your First Letter</h3>
+                <p style="color: #374151; font-size: 19px;">Start with one person you love. Use our Cultural Heritage guide if you're from Scotland, Wales, or immigrant families.</p>
             </div>
-            <div class="p-8 bg-gray-50 rounded-xl shadow-soft border-l-4 border-lime-600 relative">
-                <div class="absolute top-0 left-4 -translate-y-1/2 bg-lime-600 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold text-lg">3</div>
-                <h3 class="text-2xl font-semibold text-navy mb-2 pt-6">Use the Prompts</h3>
-                <p class="text-gray-600">"The thing I never found the right moment to tell you is..." — Write naturally, 2-3 sentences per prompt.</p>
+            
+            <div class="card border-l-4 border-gold relative">
+                <div class="step-number absolute -top-6 left-6" aria-label="Step 3">3</div>
+                <h3 class="pt-6 mb-3">Use the Prompts</h3>
+                <p style="color: #374151; font-size: 19px;">"The thing I never found the right moment to tell you is..." – Write naturally, 2-3 sentences per prompt.</p>
             </div>
-            <div class="p-8 bg-gray-50 rounded-xl shadow-soft border-l-4 border-lime-600 relative">
-                <div class="absolute top-0 left-4 -translate-y-1/2 bg-lime-600 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold text-lg">4</div>
-                <h3 class="text-2xl font-semibold text-navy mb-2 pt-6">Store with Your Will</h3>
-                <p class="text-gray-600">Follow our Executor Guide to store letters safely with your legal documents. Works with any UK solicitor or will service.</p>
+            
+            <div class="card border-l-4 border-gold relative">
+                <div class="step-number absolute -top-6 left-6" aria-label="Step 4">4</div>
+                <h3 class="pt-6 mb-3">Store with Your Will</h3>
+                <p style="color: #374151; font-size: 19px;">Follow our Executor Guide to store letters safely with your legal documents. Works with any UK solicitor or will service.</p>
             </div>
-            <div class="p-8 bg-gray-50 rounded-xl shadow-soft border-l-4 border-lime-600 relative">
-                <div class="absolute top-0 left-4 -translate-y-1/2 bg-lime-600 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold text-lg">5</div>
-                <h3 class="text-2xl font-semibold text-navy mb-2 pt-6">Add More When Ready</h3>
-                <p class="text-gray-600">Complete 2 more letters this week using our Memory Worksheets and Values templates. Your family gets both your assets and your heart.</p>
+            
+            <div class="card border-l-4 border-gold relative">
+                <div class="step-number absolute -top-6 left-6" aria-label="Step 5">5</div>
+                <h3 class="pt-6 mb-3">Add More When Ready</h3>
+                <p style="color: #374151; font-size: 19px;">Complete 2 more letters this week using our Memory Worksheets and Values templates. Your family gets both your assets and your heart.</p>
             </div>
         </div>
     </div>
 </section>
+
+<hr class="section-divider" role="presentation">
 
 <!-- Pain Section -->
-<section class="py-20 bg-yellow-50 text-center">
+<section class="py-24 bg-pattern-light text-center">
     <div class="container">
-        <h2 class="text-4xl md:text-5xl font-light text-navy mb-6">Most families get the legal will right, but miss the emotional will.</h2>
-        <p class="text-xl text-gray-700 max-w-3xl mx-auto">
-            Legal wills protect assets brilliantly. But they leave families emotionally unprepared — wondering not just what you decided, but <em class="italic">why you loved them</em> the way you did.
-        </p>
+        <h2 class="mb-6 max-w-4xl mx-auto">Most families get the legal will right, but miss the emotional will.</h2>
+        <div class="text-block">
+            <p style="font-size: 22px; color: #1f2937;">
+                Legal wills protect assets brilliantly. But they leave families emotionally unprepared – wondering not just what you decided, but <span class="accent-script" style="font-size: 28px;">why you loved them</span> the way you did.
+            </p>
+        </div>
     </div>
 </section>
 
+<hr class="section-divider" role="presentation">
+
 <!-- What's Inside Section -->
-<section id="whats-inside" class="py-20 bg-white">
-    <div class="container text-center">
-        <h2 class="text-4xl md:text-5xl font-light text-navy mb-12">What you get (57 pages total)</h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-4xl mx-auto">
-            <div class="p-8 bg-gray-50 rounded-xl shadow-soft">
-                <div class="text-4xl mb-3 text-gold"><i class="fas fa-book"></i></div>
-                <h3 class="text-xl font-semibold text-navy mb-2">Main Guide — Emotional Will</h3>
-                <ul class="list-none text-left space-y-2 mt-4 text-gray-600">
-                    <li class="flex items-center space-x-2"><span>✓</span><span>Four Pillars: Love, Decisions, Values, Conflict</span></li>
-                    <li class="flex items-center space-x-2"><span>✓</span><span>Integration with legal will, storage & delivery</span></li>
+<section class="py-24 bg-white">
+    <div class="container">
+        <h2 class="text-center mb-12">What you get</h2>
+        <p class="text-center mb-12" style="font-size: 22px; color: #374151; font-weight: 500;">57 pages total</p>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="card">
+                <svg class="icon mb-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                </svg>
+                <h3 class="mb-3">Main Guide – Emotional Will</h3>
+                <ul class="space-y-2" style="color: #374151; list-style: none; padding: 0; font-size: 19px;">
+                    <li>✓ Four Pillars: Love, Decisions, Values, Conflict</li>
+                    <li>✓ Integration with legal will, storage & delivery</li>
                 </ul>
             </div>
-            <div class="p-8 bg-gray-50 rounded-xl shadow-soft">
-                <div class="text-4xl mb-3 text-gold"><i class="fas fa-scroll"></i></div>
-                <h3 class="text-xl font-semibold text-navy mb-2">Templates</h3>
-                <ul class="list-none text-left space-y-2 mt-4 text-gray-600">
-                    <li class="flex items-center space-x-2"><span>✓</span><span>Goodbye Letter Prompts (12p)</span></li>
-                    <li class="flex items-center space-x-2"><span>✓</span><span>Memory Capsule Worksheets (8p)</span></li>
-                    <li class="flex items-center space-x-2"><span>✓</span><span>Executor Emotional Guide (6p)</span></li>
+            
+            <div class="card">
+                <svg class="icon mb-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                </svg>
+                <h3 class="mb-3">Templates</h3>
+                <ul class="space-y-2" style="color: #374151; list-style: none; padding: 0; font-size: 19px;">
+                    <li>✓ Goodbye Letter Prompts (12p)</li>
+                    <li>✓ Memory Capsule Worksheets (8p)</li>
+                    <li>✓ Executor Emotional Guide (6p)</li>
                 </ul>
             </div>
-            <div class="p-8 bg-yellow-50 rounded-xl shadow-soft border-l-4 border-gold">
-                <div class="text-4xl mb-3 text-gold"><i class="fas fa-star"></i></div>
-                <h3 class="text-xl font-semibold text-navy mb-2">Bonuses</h3>
-                <ul class="list-none text-left space-y-2 mt-4 text-gray-600">
-                    <li class="flex items-center space-x-2"><span>✓</span><span>Letter to Grandkids (4p)</span></li>
-                    <li class="flex items-center space-x-2"><span>✓</span><span>Family Dynamics Assessment (2p)</span></li>
+            
+            <div class="card border-2 border-gold">
+                <svg class="icon mb-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+                </svg>
+                <h3 class="mb-3">Bonuses</h3>
+                <ul class="space-y-2" style="color: #374151; list-style: none; padding: 0; font-size: 19px;">
+                    <li>✓ Letter to Grandkids (4p)</li>
+                    <li>✓ Family Dynamics Assessment (2p)</li>
                 </ul>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Why It Matters Section (renamed from Consequences) -->
-<section id="why-it-matters" class="py-20 bg-white">
-    <div class="container text-center">
-        <h2 class="text-4xl md:text-5xl font-light text-navy mb-12">
-            Give Your Family a Gift That Matters
-        </h2>
-        <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div class="p-8 bg-yellow-50 rounded-xl shadow-soft border-l-4 border-gold">
-                <div class="text-4xl mb-3 text-gold"><i class="fas fa-leaf"></i></div>
-                <h3 class="text-2xl font-semibold text-navy mb-4">The Gift of Clarity</h3>
-                <p class="text-gray-700">Prevent misunderstandings and provide clear, heartfelt context for your decisions, ensuring your family feels understood.</p>
+<!-- Why It Matters Section -->
+<section class="py-24 bg-pattern-light">
+    <div class="container">
+        <h2 class="text-center mb-12">Give Your Family a Gift That Matters</h2>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="card border-l-4 border-gold">
+                <svg class="icon mb-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                </svg>
+                <h3 class="mb-3">The Gift of Clarity</h3>
+                <p style="color: #374151; font-size: 19px;">Prevent misunderstandings and provide clear, heartfelt context for your decisions, ensuring your family feels understood.</p>
             </div>
-            <div class="p-8 bg-yellow-50 rounded-xl shadow-soft border-l-4 border-gold">
-                <div class="text-4xl mb-3 text-gold"><i class="fas fa-envelope-open-text"></i></div>
-                <h3 class="text-2xl font-semibold text-navy mb-4">The Gift of Connection</h3>
-                <p class="text-gray-700">Leave personal messages and stories that will keep your voice and spirit alive for generations to come.</p>
+            
+            <div class="card border-l-4 border-gold">
+                <svg class="icon mb-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+                <h3 class="mb-3">The Gift of Connection</h3>
+                <p style="color: #374151; font-size: 19px;">Leave personal messages and stories that will keep your voice and spirit alive for generations to come.</p>
             </div>
-            <div class="p-8 bg-yellow-50 rounded-xl shadow-soft border-l-4 border-gold">
-                <div class="text-4xl mb-3 text-gold"><i class="fas fa-home"></i></div>
-                <h3 class="text-2xl font-semibold text-navy mb-4">The Gift of Peace</h3>
-                <p class="text-gray-700">Give your loved ones peace of mind, knowing that they have everything they need to carry out your wishes with love.</p>
+            
+            <div class="card border-l-4 border-gold">
+                <svg class="icon mb-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                </svg>
+                <h3 class="mb-3">The Gift of Peace</h3>
+                <p style="color: #374151; font-size: 19px;">Give your loved ones peace of mind, knowing that they have everything they need to carry out your wishes with love.</p>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Pricing Section -->
-<section id="pricing" class="py-20 bg-gray-50 text-center">
+<section id="pricing" class="py-24 bg-white">
     <div class="container">
-        <h2 class="text-4xl md:text-5xl font-light text-navy mb-12">Choose your DearAfter Kit</h2>
-        <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-10">
+        <h2 class="text-center mb-6">Choose your DearAfter Kit</h2>
+        <p class="text-center mb-12 max-w-2xl mx-auto" style="font-size: 22px; color: #374151;">
             All kits include our core guides and templates. The Basic Kit gives you everything you need to start, while our Premium and Complete kits add convenience and extra value.
         </p>
-        <div class="grid md:grid-cols-3 gap-8 items-center max-w-5xl mx-auto">
+        
+        <div class="grid md:grid-cols-3 gap-8 items-center">
             <!-- Basic -->
-            <div class="p-10 bg-white border border-gray-200 rounded-3xl shadow-xl hover:scale-105 transition-transform duration-300 flex flex-col items-center">
-                <div class="text-2xl font-semibold text-navy mb-2">Basic</div>
-                <div class="text-5xl font-bold text-navy mb-4">£39</div>
-                <p class="text-gray-600 mb-6">The original 57-page kit (UK-ready)</p>
-                <a href="#" class="w-full btn bg-navy text-white text-lg px-6 py-4 rounded-lg hover:bg-gold hover:text-navy transition-colors">Get Basic — £39</a>
+            <div class="card text-center">
+                <h4 class="mb-2">Basic</h4>
+                <div style="font-size: 64px; font-weight: 700; color: var(--color-primary); margin-bottom: 16px; line-height: 1;">£39</div>
+                <p class="mb-6" style="color: #374151; font-size: 18px;">The original 57-page kit (UK-ready)</p>
+                <a href="#" class="btn btn-primary" style="width: 100%; font-size: 20px;" aria-label="Get Basic Kit for £39">Get Basic – £39</a>
             </div>
             
             <!-- Premium -->
-            <div class="p-10 bg-white border-4 border-gold rounded-3xl shadow-2xl scale-105 relative flex flex-col items-center">
-                <div class="absolute top-4 right-4 bg-gold text-navy text-sm font-semibold px-2 py-1 rounded-full">Most popular</div>
-                <div class="text-2xl font-semibold text-navy mb-2">Premium</div>
-                <div class="text-5xl font-bold text-navy mb-4">£49</div>
-                <p class="text-gray-600 mb-6">Finish faster with audio + templates</p>
-                <a href="#" class="w-full btn bg-gold text-navy text-lg px-6 py-4 rounded-lg hover:bg-navy hover:text-white transition-colors">Upgrade to Premium — £49</a>
+            <div class="card text-center border-4 border-gold relative" style="transform: scale(1.05);">
+                <div class="absolute top-4 right-4 bg-gold text-navy text-sm font-semibold px-3 py-1 rounded-full">Most popular</div>
+                <h4 class="mb-2">Premium</h4>
+                <div style="font-size: 64px; font-weight: 700; color: var(--color-primary); margin-bottom: 16px; line-height: 1;">£49</div>
+                <p class="mb-6" style="color: #374151; font-size: 18px;">Finish faster with audio + templates</p>
+                <a href="#" class="btn btn-secondary" style="width: 100%; font-size: 20px;" aria-label="Upgrade to Premium for £49">Upgrade to Premium – £49</a>
             </div>
             
             <!-- Complete -->
-            <div class="p-10 bg-white border border-gray-200 rounded-3xl shadow-xl hover:scale-105 transition-transform duration-300 flex flex-col items-center">
-                <div class="text-2xl font-semibold text-navy mb-2">Complete</div>
-                <div class="text-5xl font-bold text-navy mb-4">£99</div>
-                <p class="text-gray-600 mb-6">Best guidance + formats unlocked</p>
-                <a href="#" class="w-full btn bg-navy text-white text-lg px-6 py-4 rounded-lg hover:bg-gold hover:text-navy transition-colors">Get Complete — £99</a>
+            <div class="card text-center">
+                <h4 class="mb-2">Complete</h4>
+                <div style="font-size: 64px; font-weight: 700; color: var(--color-primary); margin-bottom: 16px; line-height: 1;">£99</div>
+                <p class="mb-6" style="color: #374151; font-size: 18px;">Best guidance + formats unlocked</p>
+                <a href="#" class="btn btn-primary" style="width: 100%; font-size: 20px;" aria-label="Get Complete Kit for £99">Get Complete – £99</a>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Guarantee Section -->
-<section id="guarantee" class="py-20 bg-gray-50">
-    <div class="container max-w-3xl mx-auto p-8 bg-blue-50 border-4 border-blue-200 rounded-xl shadow-soft">
-        <h2 class="text-4xl md:text-5xl font-semibold text-center text-blue-800 mb-8">
-            Two guarantees that remove all risk
-        </h2>
-        <ul class="list-none space-y-6 text-gray-700">
-            <li class="p-6 bg-white rounded-lg border-l-4 border-lime-600">
-                <span class="font-bold text-xl text-navy">Three-Letter Promise:</span> Write 3 letters in 7 days using our prompts — or we'll refund your money within 60 days.
-            </li>
-            <li class="p-6 bg-white rounded-lg border-l-4 border-lime-600">
-                <span class="font-bold text-xl text-navy">30-Minute Quick-Start:</span> If our checklist can't get you started in ~30 minutes, claim a full refund.
-            </li>
-        </ul>
+<section class="py-24 bg-pattern-light">
+    <div class="container max-w-3xl mx-auto">
+        <div class="card border-4 border-navy">
+            <h2 class="text-center mb-8">Two guarantees that remove all risk</h2>
+            <div class="space-y-6">
+                <div class="p-6 bg-white rounded-lg border-l-4 border-gold">
+                    <h4 class="mb-2">Three-Letter Promise:</h4>
+                    <p style="color: #374151; font-size: 19px;">Write 3 letters in 7 days using our prompts – or we'll refund your money within 60 days.</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg border-l-4 border-gold">
+                    <h4 class="mb-2">30-Minute Quick-Start:</h4>
+                    <p style="color: #374151; font-size: 19px;">If our checklist can't get you started in ~30 minutes, claim a full refund.</p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
 <!-- FAQ Section -->
-<section id="faq" class="py-20 bg-white">
-    <div class="container text-center max-w-4xl mx-auto">
-        <h2 class="text-4xl md:text-5xl font-light text-navy mb-12">
-            Frequently Asked Questions
-        </h2>
-        <div class="text-left">
-            <details class="mb-4 rounded-xl shadow-soft">
-                <summary class="p-6 cursor-pointer text-xl font-semibold text-navy bg-gray-50 hover:bg-gray-100 rounded-xl">
-                    How fast can I start?
-                </summary>
-                <p class="p-6 text-gray-600 bg-white">
-                    Use the Quick-Start Checklist to begin in ~30 minutes with 1–2 prompts. Most people finish their first letter in one sitting.
-                </p>
+<section class="py-24 bg-white">
+    <div class="container max-w-4xl mx-auto">
+        <h2 class="text-center mb-12">Frequently Asked Questions</h2>
+        
+        <div class="space-y-4">
+            <details class="card">
+                <summary>How fast can I start?</summary>
+                <p class="mt-4 pt-4 border-t" style="color: #374151; font-size: 19px;">Use the Quick-Start Checklist to begin in ~30 minutes with 1–2 prompts. Most people finish their first letter in one sitting.</p>
             </details>
-            <details class="mb-4 rounded-xl shadow-soft">
-                <summary class="p-6 cursor-pointer text-xl font-semibold text-navy bg-gray-50 hover:bg-gray-100 rounded-xl">
-                    What exactly is included?
-                </summary>
-                <p class="p-6 text-gray-600 bg-white">
-                    Main Guide (16p), Goodbye Letter Prompts (12p), Memory Capsule Worksheets (8p), Executor Guide (6p), Cultural Prompts (4p), Grandkids Letter (4p), Family Dynamics Assessment (2p), How-To-Use (4p), Quick-Start (1p). Total: 57 pages.
-                </p>
+            
+            <details class="card">
+                <summary>What exactly is included?</summary>
+                <p class="mt-4 pt-4 border-t" style="color: #374151; font-size: 19px;">Main Guide (16p), Goodbye Letter Prompts (12p), Memory Capsule Worksheets (8p), Executor Guide (6p), Cultural Prompts (4p), Grandkids Letter (4p), Family Dynamics Assessment (2p), How-To-Use (4p), Quick-Start (1p). Total: 57 pages.</p>
             </details>
-            <details class="mb-4 rounded-xl shadow-soft">
-                <summary class="p-6 cursor-pointer text-xl font-semibold text-navy bg-gray-50 hover:bg-gray-100 rounded-xl">
-                    I'm 73 and not comfortable with computers. Is this too technical?
-                </summary>
-                <p class="p-6 text-gray-600 bg-white">
-                    Not at all. Everything comes as printable documents. You can fill them out on your computer OR print them and write by hand - whatever feels more comfortable. Many customers prefer the handwritten approach as it feels more personal.
-                </p>
+            
+            <details class="card">
+                <summary>I'm 73 and not comfortable with computers. Is this too technical?</summary>
+                <p class="mt-4 pt-4 border-t" style="color: #374151; font-size: 19px;">Not at all. Everything comes as printable documents. You can fill them out on your computer OR print them and write by hand - whatever feels more comfortable. Many customers prefer the handwritten approach as it feels more personal.</p>
             </details>
-            <details class="mb-4 rounded-xl shadow-soft">
-                <summary class="p-6 cursor-pointer text-xl font-semibold text-navy bg-gray-50 hover:bg-gray-100 rounded-xl">
-                    Will my family think this is morbid or depressing?
-                </summary>
-                <p class="p-6 text-gray-600 bg-white">
-                    Quite the opposite. Most families tell us they wish they'd done this sooner because it opens beautiful conversations and brings families closer. This is about love and connection, not death and sadness.
-                </p>
+            
+            <details class="card">
+                <summary>Will my family think this is morbid or depressing?</summary>
+                <p class="mt-4 pt-4 border-t" style="color: #374151; font-size: 19px;">Quite the opposite. Most families tell us they wish they'd done this sooner because it opens beautiful conversations and brings families closer. This is about love and connection, not death and sadness.</p>
             </details>
-            <details class="mb-4 rounded-xl shadow-soft">
-                <summary class="p-6 cursor-pointer text-xl font-semibold text-navy bg-gray-50 hover:bg-gray-100 rounded-xl">
-                    I already have a will - do I need this?
-                </summary>
-                <p class="p-6 text-gray-600 bg-white">
-                    Your legal will is essential for asset protection. DearAfter adds the emotional layer that legal documents can't provide — helping your family understand not just what you decided, but why you love them.
-                </p>
+            
+            <details class="card">
+                <summary>I already have a will - do I need this?</summary>
+                <p class="mt-4 pt-4 border-t" style="color: #374151; font-size: 19px;">Your legal will is essential for asset protection. DearAfter adds the emotional layer that legal documents can't provide – helping your family understand not just what you decided, but why you love them.</p>
             </details>
-            <details class="mb-4 rounded-xl shadow-soft">
-                <summary class="p-6 cursor-pointer text-xl font-semibold text-navy bg-gray-50 hover:bg-gray-100 rounded-xl">
-                    Is this legal advice?
-                </summary>
-                <p class="p-6 text-gray-600 bg-white">
-                    No. This is an emotional companion to your legal will and works with any solicitor or will service.
-                </p>
+            
+            <details class="card">
+                <summary>Is this legal advice?</summary>
+                <p class="mt-4 pt-4 border-t" style="color: #374151; font-size: 19px;">No. This is an emotional companion to your legal will and works with any solicitor or will service. This emotional companion kit provides organization templates and memory-keeping tools only. These materials are designed to work alongside your professionally-prepared legal will. For all legal matters relating to your will, estate planning, or inheritance, please consult with a qualified solicitor or legal professional.</p>
             </details>
         </div>
     </div>
 </section>
 
 <!-- Final CTA Section -->
-<section class="py-20 bg-navy text-white text-center">
+<section class="py-24 bg-navy text-white text-center">
     <div class="container">
-        <h2 class="text-4xl md:text-5xl font-light mb-4">Complete Your Family's Inheritance</h2>
-        <p class="text-xl max-w-2xl mx-auto mb-10 opacity-90">
+        <h2 class="mb-6" style="color: white;">Complete Your Family's Inheritance</h2>
+        <p class="mb-12 max-w-2xl mx-auto" style="font-size: 24px; opacity: 0.98; line-height: 1.6;">
             A legal will protects their future. DearAfter™ protects their hearts.<br>Give them the full picture: your assets AND your love.
         </p>
-        <a href="#pricing" class="inline-block bg-gold text-navy text-xl px-10 py-5 rounded-xl shadow-lg hover:bg-yellow-600 transition-colors transform hover:-translate-y-1 font-bold">
-            Choose Your Kit
-        </a>
+        <a href="#pricing" class="btn btn-secondary" style="font-size: 24px; padding: 20px 48px;" aria-label="Choose Your Kit">Choose Your Kit</a>
     </div>
 </section>
 
 <!-- Footer -->
-<footer class="py-8 bg-gray-900 text-gray-400 text-center">
+<footer role="contentinfo">
     <div class="container">
-        <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 text-sm mb-4">
-            <a href="#" class="hover:text-white transition-colors">Terms & Conditions</a>
-            <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" class="hover:text-white transition-colors">Contact Us</a>
+        <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 mb-6">
+            <a href="#" aria-label="Terms and Conditions">Terms & Conditions</a>
+            <a href="#" aria-label="Privacy Policy">Privacy Policy</a>
+            <a href="#" aria-label="Contact Us">Contact Us</a>
         </div>
-        <p class="text-base mb-2">
+        <p class="text-center mb-4 max-w-3xl mx-auto">
             DearAfter™ is the emotional companion to your legal will. It works alongside any existing will to complete your family's inheritance with both legal protection and emotional connection.
         </p>
-        <p class="text-sm">© 2024 DearAfter. All rights reserved.</p>
+        <p class="disclaimer text-center mb-4">
+            This document contains personal reflection templates, not professional advice. Always consult qualified solicitors for legal matters. DearAfter.co.uk
+        </p>
+        <p class="text-center">© 2024 DearAfter. All rights reserved.</p>
     </div>
 </footer>
 
